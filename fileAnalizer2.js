@@ -271,50 +271,9 @@ document.getElementById("singleFileInput").addEventListener("change", function (
     // Values will be an array that contains an item
     // with the text of every selected file
     // ["File1 Content", "File2 Content" ... "FileN Content"]
-    console.log(values);
     singleFileData.push(values.toString())
   });
 }, false);
-
-/**
- * Reads an array an normalices the data in it 
- * it asumes the array has only one object
- **/
-function returnSetOfDataSF(file) {
-
-  // Abort if there were no files selected
-  if (!file.length) return;
-
-  let firstDivision = file[0].split(",");
-
-  console.log("firstDivision" + firstDivision);
-
-  let secondDivision = firstDivision.split("=");
-
-  console.log("secondDivision" + firstDivision);
-
-
-}
-
-/**
- * Reads an array an normalices the data in it 
- * it asumes the array has only multiple objects
- **/
-function returnSetOfDataMF(file) {
-
-  // Abort if there were no files selected
-  if (!file.length) return;
-
-  let firstDivision = file[0].split(",");
-
-  console.log("firstDivision" + firstDivision);
-
-  let secondDivision = firstDivision.split("=");
-
-  console.log("secondDivision" + firstDivision);
-
-
-}
 
 document.getElementById("singleFileButton").addEventListener("click", function (ev) {
 

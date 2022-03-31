@@ -246,7 +246,6 @@ const NEW_LINE = "\r\n";
 
 let singleFileData = [];
 let sanitizedFileData = "";
-let multipleFileData = [];
 let mapSingleFile = new Map();
 let mapSingleFileDetails = new Map();
 let finalArray = [];
@@ -276,46 +275,6 @@ document.getElementById("singleFileInput").addEventListener("change", function (
     singleFileData.push(values.toString())
   });
 }, false);
-
-/**
- * Reads an array an normalices the data in it 
- * it asumes the array has only one object
- **/
-function returnSetOfDataSF(file) {
-
-  // Abort if there were no files selected
-  if (!file.length) return;
-
-  let firstDivision = file[0].split(",");
-
-  console.log("firstDivision" + firstDivision);
-
-  let secondDivision = firstDivision.split("=");
-
-  console.log("secondDivision" + firstDivision);
-
-
-}
-
-/**
- * Reads an array an normalices the data in it 
- * it asumes the array has only multiple objects
- **/
-function returnSetOfDataMF(file) {
-
-  // Abort if there were no files selected
-  if (!file.length) return;
-
-  let firstDivision = file[0].split(",");
-
-  console.log("firstDivision" + firstDivision);
-
-  let secondDivision = firstDivision.split("=");
-
-  console.log("secondDivision" + firstDivision);
-
-
-}
 
 document.getElementById("singleFileButton").addEventListener("click", function (ev) {
 
@@ -361,8 +320,8 @@ function returnSetOfDataSF(file) {
   mapSingleFile = new Map(); // clean previous map
   mapSingleFileDetails = new Map(); // clean previous map
   secondDivision.forEach(createMap)
-  console.log("Termine ^_^ " + mapSingleFile);
-  console.log("Termine ^_^ " + mapSingleFileDetails);
+  console.log("Termine ^_^ mapSingleFile " + mapSingleFile);
+  console.log("Termine ^_^ mapSingleFileDetails" + mapSingleFileDetails);
 
 }
 
