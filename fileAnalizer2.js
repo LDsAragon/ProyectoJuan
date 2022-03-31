@@ -1,5 +1,6 @@
-const characteristics = ["[HEADER]", "Datos Vehículo", "Datos Propietario", "Resultado Luxometro", "Resultado Sonometro", "Resultado Gases", "Resultado Opacimetro", "Resultados Alineador al Paso", "Resultados Suspensión Eje Delantero", "Resultados Suspensión Eje Trasero", "Resultado Frenometro Eje Delantero", "Resultado Frenometro Eje Trasero", "Resultado Freno de Mano Eje Delantero", "Resultado Freno de Mano Eje Trasero", "Pruebas de Rodadura", "Parametros del Equipo ", "Datos de Generales del Ensayo", "END MET DATA", "------------End Of File--------------", "999999=Fin de Archivo", "[ENDOFFILE]", "999999=END OF FILE", "[DATAOUT]"];
+const characteristics = ["Datos Vehículo", "Datos Propietario", "Resultado Luxometro", "Resultado Sonometro", "Resultado Gases", "Resultado Opacimetro", "Resultados Alineador al Paso", "Resultados Suspensión Eje Delantero", "Resultados Suspensión Eje Trasero", "Resultado Frenometro Eje Delantero", "Resultado Frenometro Eje Trasero", "Resultado Freno de Mano Eje Delantero", "Resultado Freno de Mano Eje Trasero", "Pruebas de Rodadura", "Parametros del Equipo ", "Datos de Generales del Ensayo"];
 
+const characteristicsToDelete = ["[HEADER]",  "END MET DATA", "------------End Of File--------------", "999999=Fin de Archivo", "[ENDOFFILE]", "999999=END OF FILE", "[DATAOUT]"];
 
 const fieldNamingMap = new Map([
 ['10100','Patente'],
@@ -245,8 +246,6 @@ const fieldNamingMap = new Map([
 const NEW_LINE = "\r\n";
 
 let singleFileData = [];
-let sanitizedFileData = "";
-let multipleFileData = [];
 let mapSingleFile = new Map();
 let mapSingleFileDetails = new Map();
 let finalArray = [];
@@ -276,33 +275,6 @@ document.getElementById("singleFileInput").addEventListener("change", function (
     singleFileData.push(values.toString())
   });
 }, false);
-
-
-// Handle multiple fileuploads
-/*
-
-document.getElementById("multipleFileInput").addEventListener("change", function (ev) {
-  let files = ev.currentTarget.files;
-  let readers = [];
-
-  // Abort if there were no files selected
-  if (!files.length) return;
-
-  // Store promises in array
-  for (let i = 0; i < files.length; i++) {
-    readers.push(readFileAsText(files[i]));
-  }
-
-  // Trigger Promises
-  Promise.all(readers).then((values) => {
-    // Values will be an array that contains an item
-    // with the text of every selected file
-    // ["File1 Content", "File2 Content" ... "FileN Content"]
-    console.log(values);
-  });
-}, false);
-
-*/
 
 /**
  * Reads an array an normalices the data in it 
@@ -350,12 +322,6 @@ document.getElementById("singleFileButton").addEventListener("click", function (
 
 }, false);
 
-/* document.getElementById("multipleFileButton").addEventListener("click", function (ev) {
-
-  returnSetOfDataSF(singleFileData);
-
-}, false); */
-
 /**
  *  Simple JavaScript Promise that reads a file as text.
  **/
@@ -384,7 +350,7 @@ function returnSetOfDataSF(file) {
   // Abort if there were no files selected
   if (!file.length) return;
 
-  sanitizedFileData = cleanCharacteristics(file[0]);
+  let sanitizedFileData = cleanCharacteristics(file[0]);
 
   let firstDivisionArr = sanitizedFileData.split(NEW_LINE);
 
@@ -394,8 +360,8 @@ function returnSetOfDataSF(file) {
   mapSingleFile = new Map(); // clean previous map
   mapSingleFileDetails = new Map(); // clean previous map
   secondDivision.forEach(createMap)
-  console.log("Termine ^_^ " + mapSingleFile);
-  console.log("Termine ^_^ " + mapSingleFileDetails);
+  console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
+  console.log("Termine ^_^ mapSingleFileDetails" + mapSingleFileDetails);
 
 }
 
@@ -405,11 +371,13 @@ function createMap(item, index, arr) {
   itemArr = item.split("=");
 
   //* Si el elemento existe, nombralo sino pone el numero */
+  /*
   if (fieldNamingMap.get(itemArr[0]) != undefined ) {
     mapSingleFileDetails.set(fieldNamingMap.get(itemArr[0]) ,itemArr[1])
   } else {
     mapSingleFileDetails.set(itemArr[0], itemArr[1]);
   }
+  */
   
   mapSingleFile.set(itemArr[0], itemArr[1]);
 
