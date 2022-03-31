@@ -277,33 +277,6 @@ document.getElementById("singleFileInput").addEventListener("change", function (
   });
 }, false);
 
-
-// Handle multiple fileuploads
-/*
-
-document.getElementById("multipleFileInput").addEventListener("change", function (ev) {
-  let files = ev.currentTarget.files;
-  let readers = [];
-
-  // Abort if there were no files selected
-  if (!files.length) return;
-
-  // Store promises in array
-  for (let i = 0; i < files.length; i++) {
-    readers.push(readFileAsText(files[i]));
-  }
-
-  // Trigger Promises
-  Promise.all(readers).then((values) => {
-    // Values will be an array that contains an item
-    // with the text of every selected file
-    // ["File1 Content", "File2 Content" ... "FileN Content"]
-    console.log(values);
-  });
-}, false);
-
-*/
-
 /**
  * Reads an array an normalices the data in it 
  * it asumes the array has only one object
@@ -349,12 +322,6 @@ document.getElementById("singleFileButton").addEventListener("click", function (
   returnSetOfDataSF(singleFileData);
 
 }, false);
-
-/* document.getElementById("multipleFileButton").addEventListener("click", function (ev) {
-
-  returnSetOfDataSF(singleFileData);
-
-}, false); */
 
 /**
  *  Simple JavaScript Promise that reads a file as text.
