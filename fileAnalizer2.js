@@ -297,7 +297,7 @@ const headerMap = new Map([
   ["15008", "Prueba Sonometro"],
 ]);
 
-const headerArray = [
+let headerArray = [
   "10100",
   "10102",
   "10104",
@@ -545,7 +545,6 @@ function generateStructureOfFinalMap() {
 
     mapOfcharacteristics.set(characteristics[i], emptyArray);
 
-    // characteristics[i] == structureMap;
   }
 
   return mapOfcharacteristics;
@@ -556,18 +555,70 @@ function populateStructure(structure) {
 
   //for (var i = 0; i < mapSingleFile.size; i++) {
 
-    mapSingleFile.entries.forEach(function() {
-      
-        console.log(item)
-
+    mapSingleFile.forEach(function (item, key, map){
+      populateAllStructuresOnMap(item, key, map, mappedHeader)
     })
     
   //}
 
-  //console.log(structureMap);
-  // structureMap.delete("HEADER")
-  // structureMap.set("HEADER",mappedHeader)
-  // console.log(structureMap);
+  if (mappedHeader.size > 0) {
+//    structureMap.delete("HEADER")
+    structureMap.set("HEADER",mappedHeader)
+    console.log(structureMap);
+  
+  }
   
   return structureMap;
+}
+
+
+function populateAllStructuresOnMap(value, key, map,mappedHeader) {
+
+
+  mapHeader(key, value, mappedHeader);
+  
+
+  
+}
+function mapHeader(key, value, mappedHeader) {
+  for (var i = 0; i < headerArray.length; i++) {
+    if (key = headerArray[i]) {
+      console.log(`Esta llave [${key}] se llama ${headerMap.get(key)} tiene por valor ${value} pertenece al elemento header`);
+
+      mappedHeader.set(headerMap.get(key), mapSingleFile.get(key));
+      headerArray = headerArray.slice(i);
+    }
+    console.log(`[${key}] --- ${headerArray[i]}`);
+  }
+  return key;
+}
+
+
+function mapAllineacion(key, value, mappedHeader) {
+  for (var i = 0; i < headerArray.length; i++) {
+    if (key = headerArray[i]) {
+      console.log(`Esta llave [${key}] con valor ${value} pertenece al elemento header`);
+
+      mappedHeader.delete(key);
+      mappedHeader.set(headerMap.get(key), mapSingleFile.get(key));
+      headerArray = headerArray.slice(i);
+    }
+    console.log(`[${key}] --- ${headerArray[i]}`);
+  }
+  return key;
+}
+
+
+
+function transformMapToJson(map) {
+  let obj = Object.fromEntries(map); 
+  
+
+  let headerObj = Object.fromEntries(map.get("HEADER")); 
+  obj.HEADER = headerObj ;
+
+  let jsonString = JSON.stringify(obj);
+  console.log(jsonString);
+
+  return jsonString ;
 }
