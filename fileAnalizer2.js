@@ -297,7 +297,40 @@ const headerMap = new Map([
   ["15008", "Prueba Sonometro"],
 ]);
 
-const structureMap = new Map([
+const headerArray = [
+  "10100",
+  "10102",
+  "10104",
+  "10200",
+  "10201",
+  "10202",
+  "10203",
+  "10204",
+  "10208",
+  "10209",
+  "10210",
+  "10300",
+  "10301",
+  "10302",
+  "10303",
+  "10304",
+  "10305",
+  "10306",
+  "10307",
+  "16001",
+  "16000",
+  "15000",
+  "15001",
+  "15002",
+  "15003",
+  "15004",
+  "15005",
+  "15006",
+  "15007",
+  "15008",
+];
+
+let structureMap = new Map([
   ["HEADER", headerMap],
   ["ALINEACIÓN", []],
   ["SUSPENSIÓN Eje Delantero", []],
@@ -333,10 +366,10 @@ const DOT_COMA = ";";
 
 let singleFileData = [];
 let sanitizedFileData = [];
+let singleFileKeysArray = [];
+let singleFileValuesArray = [];
 let mapSingleFile = new Map();
 let inverseSingleFile = [];
-let mapSingleFileDetails = new Map();
-let finalArray = [];
 
 // Handle multiple fileuploads
 document.getElementById("singleFileInput").addEventListener(
@@ -382,6 +415,14 @@ document.getElementById("generateStructure").addEventListener(
   false
 );
 
+document.getElementById("populateHeader").addEventListener(
+  "click",
+  function (ev) {
+    populateStructure()
+  },
+  false
+);
+
 /**
  *  Simple JavaScript Promise that reads a file as text.
  **/
@@ -411,33 +452,22 @@ function returnSetOfDataSF(file) {
 
   sanitizedFileData = cleanCharacteristics(file[0]);
 
-  let structure = generateStructureOfFinalMap();
+  //let structure = generateStructureOfFinalMap();
 
-  structure = populateStructure(structure, sanitizedFileData);
+  //structure = populateStructure(structure);
 
   let firstDivisionArr = sanitizedFileData.split(NEW_LINE);
 
   let secondDivision = cleanElementsOfArray(firstDivisionArr);
-  finalArray = secondDivision;
 
   mapSingleFile = new Map(); // clean previous map
-  mapSingleFileDetails = new Map(); // clean previous map
+
   secondDivision.forEach(createMap);
   console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
-  console.log("Termine ^_^ mapSingleFileDetails" + mapSingleFileDetails);
 }
 
 function createMap(item, index, arr) {
-  itemArr = item.split("=");
-
-  //* Si el elemento existe, nombralo sino pone el numero */
-  /*
-  if (fieldNamingMap.get(itemArr[0]) != undefined ) {
-    mapSingleFileDetails.set(fieldNamingMap.get(itemArr[0]) ,itemArr[1])
-  } else {
-    mapSingleFileDetails.set(itemArr[0], itemArr[1]);
-  }
-  */
+  let itemArr = item.split("=");
 
   mapSingleFile.set(itemArr[0], itemArr[1]);
 
@@ -446,6 +476,10 @@ function createMap(item, index, arr) {
   };
 
   inverseSingleFile.push(obj);
+
+  singleFileKeysArray.push(itemArr[0]) ;
+  singleFileValuesArray.push(itemArr[1]) ;
+
 
 }
 
@@ -511,20 +545,29 @@ function generateStructureOfFinalMap() {
 
     mapOfcharacteristics.set(characteristics[i], emptyArray);
 
-    characteristics[i] == structureMap;
+    // characteristics[i] == structureMap;
   }
 
   return mapOfcharacteristics;
 }
 
-function populateStructure(structure, infoToParse) {
+function populateStructure(structure) {
   let mappedHeader = new Map();
 
-  for (var i = 0; i < mapSingleFile.length; i++) {
-    if (mapSingleFile[i]) console.log("");
-  }
+  //for (var i = 0; i < mapSingleFile.size; i++) {
 
-  //  mapSingleFile
+    mapSingleFile.entries.forEach(function() {
+      
+        console.log(item)
 
-  return structure;
+    })
+    
+  //}
+
+  //console.log(structureMap);
+  // structureMap.delete("HEADER")
+  // structureMap.set("HEADER",mappedHeader)
+  // console.log(structureMap);
+  
+  return structureMap;
 }
