@@ -247,6 +247,7 @@ const NEW_LINE = "\r\n";
 let singleFileData = [];
 let sanitizedFileData = "";
 let mapSingleFile = new Map();
+let inverseMapSingleFile = new Map();
 let mapSingleFileDetails = new Map();
 let finalArray = [];
 
@@ -338,6 +339,7 @@ function createMap(item, index, arr) {
   }
   
   mapSingleFile.set(itemArr[0], itemArr[1]);
+  inverseMapSingleFile.set(itemArr[1], itemArr[0])
 
 }
 
