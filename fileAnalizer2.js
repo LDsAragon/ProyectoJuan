@@ -297,7 +297,7 @@ const headerMap = new Map([
   ["15008", "Prueba Sonometro"],
 ]);
 
-let headerArray = [
+const headerArray = [
   "10100",
   "10102",
   "10104",
@@ -399,6 +399,38 @@ document.getElementById("singleFileInput").addEventListener(
   false
 );
 
+document.getElementById("singleAutomaticFileInput").addEventListener(
+  "change",
+  function (ev) {
+    let files = ev.currentTarget.files;
+    let readers = [];
+
+    // Abort if there were no files selected
+    if (!files.length) return;
+
+    // Store promises in array
+    for (let i = 0; i < files.length; i++) {
+      readers.push(readFileAsText(files[i]));
+    }
+
+    singleFileData = [];
+
+    // Trigger Promises
+    Promise.all(readers).then((values) => {
+      // Values will be an array that contains an item
+      // with the text of every selected file
+      // ["File1 Content", "File2 Content" ... "FileN Content"]
+      singleFileData.push(values.toString());
+    });
+
+    returnAutomaticSetOfDataSF(singleFileData);
+    populateStructure() ;
+    transformMapToJson(structureMap) ;
+
+  },
+  false
+);
+
 document.getElementById("singleFileButton").addEventListener(
   "click",
   function (ev) {
@@ -463,6 +495,31 @@ function returnSetOfDataSF(file) {
   mapSingleFile = new Map(); // clean previous map
 
   secondDivision.forEach(createMap);
+  console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
+}
+
+/**
+ * Reads an array an normalices the data in it
+ * it asumes the array has only one object
+ **/
+ function returnAutomaticSetOfDataSF(file) {
+  // Abort if there were no files selected
+  if (!file.length) return;
+
+  sanitizedFileData = cleanCharacteristics(file[0]);
+
+  //let structure = generateStructureOfFinalMap();
+
+  //structure = populateStructure(structure);
+
+  let firstDivisionArr = sanitizedFileData.split(NEW_LINE);
+
+  let secondDivision = cleanElementsOfArray(firstDivisionArr);
+
+  mapSingleFile = new Map(); // clean previous map
+
+  secondDivision.forEach(createMap);
+
   console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
 }
 
@@ -550,22 +607,41 @@ function generateStructureOfFinalMap() {
   return mapOfcharacteristics;
 }
 
-function populateStructure(structure) {
+function populateStructure() {
   let mappedHeader = new Map();
-
-  //for (var i = 0; i < mapSingleFile.size; i++) {
+  let mappedAlineacion = new Map();
+  let mappedSuspencionEjeDelantero = new Map();
+  let mappedSuspencionEjeTrasero = new Map();
+  let mappedOpacimetro = new Map();
+  let mappedAnalizadorDeGases = new Map();
+  let mappedFrenosEje_1 = new Map();
+  let mappedFrenosEje_2 = new Map();
+  let mappedFrenosEje_3 = new Map();
+  let mappedFrenosEje_4 = new Map();
+  let mappedFrenosEje_5 = new Map();
+  let mappedFrenosEje_6 = new Map();
+  let mappedFrenoDeManoEje_1 = new Map();
+  let mappedFrenoDeManoEje_2 = new Map();
+  let mappedFrenoDeManoEje_3 = new Map();
+  let mappedFrenoDeManoEje_4 = new Map();
+  let mappedFrenoDeManoEje_5 = new Map();
+  let mappedFrenoDeManoEje_6 = new Map();
+  let mappedSonometro = new Map();
+  let mappedLuxometro = new Map();
+  let mappedInspeccionVisual = new Map();
+  let mappedInspeccionDH = new Map();
+  let mappedFrenos = new Map();
+  let mappedValoresCalibrados = new Map();
+  let mappedLineaDePrueba = new Map();
+  let mappedEstadisticaDePuestos = new Map();
 
     mapSingleFile.forEach(function (item, key, map){
       populateAllStructuresOnMap(item, key, map, mappedHeader)
     })
     
-  //}
-
   if (mappedHeader.size > 0) {
-//    structureMap.delete("HEADER")
     structureMap.set("HEADER",mappedHeader)
     console.log(structureMap);
-  
   }
   
   return structureMap;
@@ -581,33 +657,36 @@ function populateAllStructuresOnMap(value, key, map,mappedHeader) {
   
 }
 function mapHeader(key, value, mappedHeader) {
+
+
   for (var i = 0; i < headerArray.length; i++) {
-    if (key = headerArray[i]) {
-      console.log(`Esta llave [${key}] se llama ${headerMap.get(key)} tiene por valor ${value} pertenece al elemento header`);
+    if (key == headerArray[i]) {
+
+      //console.log(`Esta llave [${key}] `);
+      //console.log(`Este valor [${value}] `);
+      //console.log(`Esta llave [${headerArray[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerArray[i]}`);
 
       mappedHeader.set(headerMap.get(key), mapSingleFile.get(key));
-      headerArray = headerArray.slice(i);
     }
-    console.log(`[${key}] --- ${headerArray[i]}`);
   }
-  return key;
+  return mappedHeader;
 }
 
+function mapAlineacion(key, value, mappedAlineacion) {
 
-function mapAllineacion(key, value, mappedHeader) {
+
   for (var i = 0; i < headerArray.length; i++) {
-    if (key = headerArray[i]) {
-      console.log(`Esta llave [${key}] con valor ${value} pertenece al elemento header`);
+    if (key == headerArray[i]) {
 
-      mappedHeader.delete(key);
-      mappedHeader.set(headerMap.get(key), mapSingleFile.get(key));
-      headerArray = headerArray.slice(i);
+      //console.log(`Esta llave [${key}] `);
+      //console.log(`Este valor [${value}] `);
+      //console.log(`Esta llave [${headerArray[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerArray[i]}`);
+
+      mappedAlineacion.set(headerMap.get(key), mapSingleFile.get(key));
     }
-    console.log(`[${key}] --- ${headerArray[i]}`);
   }
-  return key;
+  return mappedAlineacion;
 }
-
 
 
 function transformMapToJson(map) {
