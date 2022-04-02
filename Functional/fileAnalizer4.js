@@ -436,16 +436,16 @@ function generateAllStructuresOnMap(
  *
  * @param {*} key current key from mapSingleFile
  * @param {*} value current value from mapSingleFile
- * @param {*} mappedHeader the placeholder for data to be mapped into from data in the mapSingleFile global variable
+ * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
-function mapHeader(key, value, mappedHeader) {
+function mapHeader(key, value, mappedObj) {
   for (var i = 0; i < headerKeys.length; i++) {
     if (key == headerKeys[i]) {
-      mappedHeader.set(headerMap.get(key), mapSingleFile.get(key));
+      mappedObj.set(headerMap.get(key), mapSingleFile.get(key));
     }
   }
-  return mappedHeader;
+  return mappedObj;
 }
 /**
  * Function to be called in a for each loop of the global variable mapSingleFile
@@ -453,16 +453,16 @@ function mapHeader(key, value, mappedHeader) {
  *
  * @param {*} key current key from mapSingleFile
  * @param {*} value current value from mapSingleFile
- * @param {*} mappedAlineacion the placeholder for data to be mapped into from data in the mapSingleFile global variable
+ * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
-function mapAlineacion(key, value, mappedAlineacion) {
+function mapAlineacion(key, value, mappedObj) {
   for (var i = 0; i < alineacionKeys.length; i++) {
     if (key == alineacionKeys[i]) {
-      mappedAlineacion.set(alineacionMap.get(key), mapSingleFile.get(key));
+      mappedObj.set(alineacionMap.get(key), mapSingleFile.get(key));
     }
   }
-  return mappedAlineacion;
+  return mappedObj;
 }
 
 /**
