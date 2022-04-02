@@ -55,6 +55,7 @@ import {
   lineaDePruebaKeys,
   estadisticaDePuestosKeys,
   noVinculadosKeys,
+  collectionOfVariables ,
 } from "./constantCollections.js";
 import {
   SEMICOLON,
@@ -369,20 +370,18 @@ function populateStructure() {
       item,
       key,
       map,
-      mappedHeader,
-      mappedAlineacion,
-      collectionOfMaps
+      collectionOfMaps,
+      collectionOfVariables
     );
   });
 
-  /** Beggining of elements replacing in structure map */
-  if (mappedHeader.size > 0) {
-    structureMap.set(HEADER, mappedHeader);
-  }
+  /** Replace elements in structure map */
+  for (let i = 0; i < collectionOfMaps.length ; i++) {
+    
+    if (collectionOfMaps[i].size > 0) {
+      structureMap.set(collectionOfVariables[i], collectionOfMaps[i]);
+    }
 
-  /** Beggining of elements replacing in structure map */
-  if (mappedAlineacion.size > 0) {
-    structureMap.set(ALINEACION, mappedAlineacion);
   }
 
   return structureMap;
@@ -401,10 +400,13 @@ function generateAllStructuresOnMap(
   value,
   key,
   map,
-  collectionOfMaps
+  collectionOfMaps,
+  collectionOfVariables,
 ) {
   mapHeader(key, value, collectionOfMaps[intHeader]);
   mapAlineacion(key, value, collectionOfMaps[intAlineacion]);
+  mapSuspencionEjeDelantero(key, value, collectionOfMaps[intSuspencionEjeDelantero]);
+  
 }
 
 /**
@@ -473,11 +475,14 @@ function mapAlineacion(key, value, mappedAlineacion) {
 function transformMapToJson() {
   let obj = Object.fromEntries(structureMap);
 
-  let headerObj = Object.fromEntries(structureMap.get(HEADER));
-  obj.header = headerObj;
+  /** Beggining of elements replacing in structure map */
+  for (let i = 0; i < collectionOfVariables.length ; i++) {
+    
+    let internalObj = Object.fromEntries(structureMap.get(collectionOfVariables[i]));
+    let varToSearch = collectionOfVariables[i] ;
+    obj[varToSearch] = internalObj;
 
-  let alineacionObj = Object.fromEntries(structureMap.get(ALINEACION));
-  obj.alineacion = alineacionObj;
+  }
 
   let jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs
   //let jsonString = JSON.stringify(obj); // just the minimized json
