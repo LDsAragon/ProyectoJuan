@@ -176,7 +176,7 @@ document.getElementById("singleFileButton").addEventListener(
   function (ev) {
     let fileData = returnSetOfDataSF();
     let transformedMap = populateStructure();
-    let text = transformMapToJson(structureMap);
+    let text = transformMapToJson();
 
     if (transformedMap !== structureFinalMap) {
       document.querySelector("#jsonContainer").innerHTML = text;
@@ -374,11 +374,13 @@ function populateStructure() {
     );
   });
 
-  /** Replace elements in structure map */
+  /** Replace elements in structure map if they where updated, instantiate empty map them if unchanged */
   for (let i = 0; i < collectionOfMaps.length ; i++) {
     
     if (collectionOfMaps[i].size > 0) {
       structureMap.set(collectionOfVariables[i], collectionOfMaps[i]);
+    } else {
+      structureMap.set(collectionOfVariables[i], new Map());
     }
 
   }
