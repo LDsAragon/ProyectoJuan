@@ -1,4 +1,3 @@
-
 // import { structureMap, characteristics, headerMap, headerArray } from "./constantMaps.js";
 
 const characteristics = [
@@ -333,7 +332,6 @@ const headerMap = new Map([
   ["15008", "Prueba Sonometro"],
 ]);
 
-
 let structureMap = new Map([
   ["HEADER", headerMap],
   ["ALINEACIÓN", []],
@@ -369,11 +367,12 @@ const EMPTY = "";
 const DOT_COMA = ";";
 
 let singleFileData = [];
-let sanitizedFileData = [];
-let singleFileKeysArray = [];
-let singleFileValuesArray = [];
+let multipleFileData = [];
+// let sanitizedFileData = [];
+//let singleFileKeysArray = [];
+// let singleFileValuesArray = [];
 let mapSingleFile = new Map();
-let inverseSingleFile = [];
+// let inverseSingleFile = [];
 
 // Handle multiple fileuploads
 document.getElementById("singleFileInput").addEventListener(
@@ -429,12 +428,48 @@ document.getElementById("singleAutomaticFileInput").addEventListener(
     });
 
     if (singleFileData.length > 0) {
-      returnAutomaticSetOfDataSF(singleFileData);
-      populateStructure() ;
-      transformMapToJson(structureMap) ;
+      returnSetOfDataSF(singleFileData);
+      populateStructure();
+      transformMapToJson(structureMap);
     }
-    
 
+    document.getElementById("singleFileButton").click();
+  },
+  false
+);
+
+document.getElementById("multipleFileInput").addEventListener(
+  "change",
+  function (ev) {
+    let files = ev.currentTarget.files;
+    let readers = [];
+    let readFiles = [];
+
+    // Abort if there were no files selected
+    if (!files.length) return;
+
+    // Store promises in array
+    for (let i = 0; i < files.length; i++) {
+      readers.push(readFileAsText(files[i]));
+      readFiles.push(i,readFileAsText(files[i]));
+    }
+
+    multipleFileData = [];
+
+    // Trigger Promises
+    Promise.all(readers).then((values) => {
+      // Values will be an array that contains an item
+      // with the text of every selected file
+      // ["File1 Content", "File2 Content" ... "FileN Content"]
+      multipleFileData.push(values.toString());
+    });
+    
+    setTimeout(function () {
+      
+      document.getElementById("multipleFileButton").click();
+      console.log("Haciendo click sobre multipleFileButton")
+      }, 100);
+    
   },
   false
 );
@@ -443,25 +478,23 @@ document.getElementById("singleFileButton").addEventListener(
   "click",
   function (ev) {
     returnSetOfDataSF(singleFileData);
+    populateStructure();
+    transformMapToJson(structureMap);
   },
   false
 );
 
-document.getElementById("generateStructure").addEventListener(
+document.getElementById("multipleFileButton").addEventListener(
   "click",
   function (ev) {
-    generateStructureOfFinalArray();
+    receiveMultipleFiles(multipleFileData);
+    populateStructure();
+    transformMapToJson(structureMap);
   },
   false
 );
 
-document.getElementById("populateHeader").addEventListener(
-  "click",
-  function (ev) {
-    populateStructure()
-  },
-  false
-);
+
 
 /**
  *  Simple JavaScript Promise that reads a file as text.
@@ -502,15 +535,17 @@ function returnSetOfDataSF(file) {
   console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
 }
 
-/**
- * Reads an array an normalices the data in it
- * it asumes the array has only one object
- **/
- function returnAutomaticSetOfDataSF(file) {
+function receiveMultipleFiles(file) {
+  file.forEach((element, index, array) => {
+    processFiles(element);
+  });
+}
+
+function processFiles(file) {
   // Abort if there were no files selected
   if (!file.length) return;
 
-  sanitizedFileData = cleanCharacteristics(file[0]);
+  sanitizedFileData = cleanCharacteristics(file);
 
   let firstDivisionArr = sanitizedFileData.split(NEW_LINE);
 
@@ -519,8 +554,7 @@ function returnSetOfDataSF(file) {
   mapSingleFile = new Map(); // clean previous map
 
   secondDivision.forEach(createMap);
-
-  console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
+  console.log("Termine ^_^ mapMultipleFile" + mapSingleFile);
 }
 
 function createMap(item, index, arr) {
@@ -532,12 +566,10 @@ function createMap(item, index, arr) {
     [itemArr[1]]: itemArr[0],
   };
 
-  inverseSingleFile.push(obj);
+ //  inverseSingleFile.push(obj);
 
-  singleFileKeysArray.push(itemArr[0]) ;
-  singleFileValuesArray.push(itemArr[1]) ;
-
-
+  //singleFileKeysArray.push(itemArr[0]);
+  //singleFileValuesArray.push(itemArr[1]);
 }
 
 /**
@@ -601,7 +633,6 @@ function generateStructureOfFinalMap() {
     arrayOfcharacteristics.push(obj);
 
     mapOfcharacteristics.set(characteristics[i], emptyArray);
-
   }
 
   return mapOfcharacteristics;
@@ -635,33 +666,24 @@ function populateStructure() {
   let mappedLineaDePrueba = new Map();
   let mappedEstadisticaDePuestos = new Map();
 
-    mapSingleFile.forEach(function (item, key, map){
-      populateAllStructuresOnMap(item, key, map, mappedHeader)
-    })
-    
+  mapSingleFile.forEach(function (item, key, map) {
+    populateAllStructuresOnMap(item, key, map, mappedHeader);
+  });
+
   if (mappedHeader.size > 0) {
-    structureMap.set("HEADER",mappedHeader)
+    structureMap.set("HEADER", mappedHeader);
     console.log(structureMap);
   }
-  
+
   return structureMap;
 }
 
-
-function populateAllStructuresOnMap(value, key, map,mappedHeader) {
-
-
+function populateAllStructuresOnMap(value, key, map, mappedHeader) {
   mapHeader(key, value, mappedHeader);
-  
-
-  
 }
 function mapHeader(key, value, mappedHeader) {
-
-
   for (var i = 0; i < headerArray.length; i++) {
     if (key == headerArray[i]) {
-
       //console.log(`Esta llave [${key}] `);
       //console.log(`Este valor [${value}] `);
       //console.log(`Esta llave [${headerArray[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerArray[i]}`);
@@ -673,11 +695,8 @@ function mapHeader(key, value, mappedHeader) {
 }
 
 function mapAlineacion(key, value, mappedAlineacion) {
-
-
   for (var i = 0; i < headerArray.length; i++) {
     if (key == headerArray[i]) {
-
       //console.log(`Esta llave [${key}] `);
       //console.log(`Este valor [${value}] `);
       //console.log(`Esta llave [${headerArray[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerArray[i]}`);
@@ -688,16 +707,14 @@ function mapAlineacion(key, value, mappedAlineacion) {
   return mappedAlineacion;
 }
 
-
 function transformMapToJson(map) {
-  let obj = Object.fromEntries(map); 
-  
+  let obj = Object.fromEntries(map);
 
-  let headerObj = Object.fromEntries(map.get("HEADER")); 
-  obj.HEADER = headerObj ;
+  let headerObj = Object.fromEntries(map.get("HEADER"));
+  obj.HEADER = headerObj;
 
   let jsonString = JSON.stringify(obj);
   console.log(jsonString);
 
-  return jsonString ;
+  return jsonString;
 }

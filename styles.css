@@ -2,12 +2,12 @@ body {
 	margin: 0;
 }
 
-#demo-container {
+.container {
 	text-align: center;
 	margin: 40px auto;
 }
 
-#file-input-label {
+#file-input-label, #file-button-label {
 	width: 200px;
 	cursor: pointer;
 	background-color: #336699;
@@ -17,16 +17,18 @@ body {
 	margin: 0 auto;
 }
 
-#file-input {
+#file-input, .button-input {
 	display: none;
 }
+
+
 
 #file-progress-container {
 	display: none;
 	margin: 15px 0 0 0;
 }
 
-#contents {
+#contents, #jsonContainer {
 	margin: 15px 0 0 0;
 	display: none;
 	text-align: left;

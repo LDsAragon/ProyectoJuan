@@ -9,19 +9,36 @@
 
 <body>
 
+  <div class="container"> 
+    <label class="file-input-label" for="myfile0">Select a file:</label>
+    <input type="file" id="singleFileInput" name="myfile00">
+    <button id="singleFileButton" > ParseData </button><br><br>
+  </div> 
 
-  <label for="myfile">Select a file:</label>
-  <input type="file" id="singleFileInput" name="myfile">
-  <button id="singleFileButton" > ParseData </button><br><br><br>
+  <div class="container"> 
+  <label class="file-input-label" for="myfile1">Select a file and process automaticaly (Check Logs):</label>
+  <input type="file" id="singleAutomaticFileInput" name="myfile1"></input><br><br>
+  </div>
+  
+  <div class="container"> 
+  <label class="file-input-label" for="myfiles">Select multiple file:</label>
+  <input type="file" id="multipleFileInput" name="myfiles" multiple="multiple">
+  <button id="multipleFileButton" > ParseData </button><br><br>
+  </div>
 
-  <button id="generateStructure" > GenerateStructure </button><br><br><br>
 
-  <button id="populateHeader" > PopulateHeader </button><br><br><br>
+  <!-- allow user to select file -->
+<input type="file" id="file-input" />
 
-  <label for="myfile">Select a file and process automaticaly (Check Logs):</label>
-  <input type="file" id="singleAutomaticFileInput" name="myfile"></input>
+<!-- button to start reading the file -->
+<button id="read-button">Read File</button>
+
+<!-- file contents will be placed here -->
+<pre id="file-contents"></pre>
+
 
    <script src="./fileAnalizer2.js"></script> 
+   <script src="./fileAnalizer3.js"></script> 
   <!-- <script type="module" src="./fileAnalizer2.js"></script> -->
 </body>
 
