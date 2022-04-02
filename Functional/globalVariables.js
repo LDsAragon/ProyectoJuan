@@ -56,7 +56,7 @@ import {
   lineaDePruebaMap,
   estadisticaDePuestosMap,
   noVinculadosMap,
-} from "./constantMaps.js";
+} from "./constantCollections.js";
 
 /**
  * File used to store global variables, should the exist probably not, but they do, so deal with it

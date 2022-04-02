@@ -29,16 +29,6 @@ import {
 } from "./constantVariables.js";
 
 /**
- * File to load all maps and static data used for comparison against the text file. 
- */
-
-
-
-
-
-
-
-/**
  * Dirty Categories used to clean the trash data from the read file.
  */
 export const categories = [
@@ -345,6 +335,166 @@ export const headerKeys = [
   "15008",
 ];
 
+/**
+ * All keys from the alineacion category in the excel file.
+ */
+export const alineacionKeys = [ 
+
+] ;
+/**
+ * All keys from the suspencionEjeDelantero category in the excel file.
+ */
+export const suspencionEjeDelanteroKeys = [ 
+
+] ;
+/**
+ * All keys from the suspencionEjeTrasero category in the excel file.
+ */
+export const suspencionEjeTraseroKeys = [ 
+
+] ;
+/**
+ * All keys from the opacimetro category in the excel file.
+ */
+export const opacimetroKeys = [ 
+
+] ;
+/**
+ * All keys from the analizadorDeGases category in the excel file.
+ */
+export const analizadorDeGasesKeys = [ 
+
+] ;
+/**
+ * All keys from the frenosEje_1 category in the excel file.
+ */
+export const frenosEje_1Keys = [ 
+
+] ;
+/**
+ * All keys from the frenosEje_2 category in the excel file.
+ */
+export const frenosEje_2Keys = [ 
+
+] ;
+/**
+ * All keys from the frenosEje category in the excel file.
+ */
+export const frenosEje_3Keys = [ 
+
+] ;
+/**
+ * All keys from the frenosEje_4 category in the excel file.
+ */
+export const frenosEje_4Keys = [ 
+
+] ;
+/**
+ * All keys from the frenosEje_5 category in the excel file.
+ */
+export const frenosEje_5Keys = [ 
+
+] ;
+/**
+ * All keys from the frenosEje_6 category in the excel file.
+ */
+export const frenosEje_6Keys = [ 
+
+] ;
+/**
+ * All keys from the frenoDeManoEje_1 category in the excel file.
+ */
+export const frenoDeManoEje_1Keys = [ 
+
+] ;
+/**
+ * All keys from the frenoDeManoEje_2 category in the excel file.
+ */
+export const frenoDeManoEje_2Keys = [ 
+
+] ;
+/**
+ * All keys from the frenoDeManoEje_3 category in the excel file.
+ */
+export const frenoDeManoEje_3Keys = [ 
+
+] ;
+/**
+ * All keys from the frenoDeManoEje_4 category in the excel file.
+ */
+export const frenoDeManoEje_4Keys = [ 
+
+] ;
+/**
+ * All keys from the frenoDeManoEje_5 category in the excel file.
+ */
+export const frenoDeManoEje_5Keys = [ 
+
+] ;
+/**
+ * All keys from the frenoDeManoEje_6 category in the excel file.
+ */
+export const frenoDeManoEje_6Keys = [ 
+
+] ;
+/**
+ * All keys from the sonometro category in the excel file.
+ */
+export const sonometroKeys = [ 
+
+] ;
+/**
+ * All keys from the luxometro category in the excel file.
+ */
+export const luxometroKeys = [ 
+
+] ;
+/**
+ * All keys from the inspeccionVisual category in the excel file.
+ */
+export const inspeccionVisualKeys = [ 
+
+] ;
+/**
+ * All keys from the inspeccionDH category in the excel file.
+ */
+export const inspeccionDHKeys = [ 
+
+] ;
+/**
+ * All keys from the frenos category in the excel file.
+ */
+export const frenosKeys = [ 
+
+] ;
+/**
+ * All keys from the valoresCalibrados category in the excel file.
+ */
+export const valoresCalibradosKeys = [ 
+
+] ;
+/**
+ * All keys from the lineaDePrueba category in the excel file.
+ */
+export const lineaDePruebaKeys = [ 
+
+] ;
+/**
+ * All keys from the estadisticaDePuestos category in the excel file.
+ */
+export const estadisticaDePuestosKeys = [ 
+
+] ;
+
+/**
+ * All keys from the noVinculados category in the excel file.
+ */
+export const noVinculadosKeys = [ 
+
+] 
+/**
+ * All keys and values from the header category in the excel file.
+ */
 export const headerMap = new Map([
   ["10100", "Patente"],
   ["10102", "Numero de Chasis"],
@@ -378,85 +528,116 @@ export const headerMap = new Map([
   ["15008", "Prueba Sonometro"],
 ]);
 
-export const alineacionMap = new Map([
+/**
+ * All keys and values from the alineacion category in the excel file.
+ */
+export const alineacionMap = new Map([]);
+/**
+ * All keys and values from the suspencionEjeDelantero category in the excel file.
+ */
+export const suspencionEjeDelanteroMap = new Map([]);
+/**
+ * All keys and values from the suspencionEjeTrasero category in the excel file.
+ */
+export const suspencionEjeTraseroMap = new Map([]);
+/**
+ * All keys and values from the opacimetro category in the excel file.
+ */
+export const opacimetroMap = new Map([]);
+/**
+ * All keys and values from the analizadorDeGases category in the excel file.
+ */
+export const analizadorDeGasesMap = new Map([]);
+/**
+ * All keys and values from the frenosEje_1 category in the excel file.
+ */
+export const frenosEje_1Map = new Map([]);
+/**
+ * All keys and values from the frenosEje_2 category in the excel file.
+ */
+export const frenosEje_2Map = new Map([]);
+/**
+ * All keys and values from the frenosEje category in the excel file.
+ */
+export const frenosEje_3Map = new Map([]);
+/**
+ * All keys and values from the frenosEje_4 category in the excel file.
+ */
+export const frenosEje_4Map = new Map([]);
+/**
+ * All keys and values from the frenosEje_5 category in the excel file.
+ */
+export const frenosEje_5Map = new Map([]);
+/**
+ * All keys and values from the frenosEje_6 category in the excel file.
+ */
+export const frenosEje_6Map = new Map([]);
+/**
+ * All keys and values from the frenoDeManoEje_1 category in the excel file.
+ */
+export const frenoDeManoEje_1Map = new Map([]);
+/**
+ * All keys and values from the frenoDeManoEje_2 category in the excel file.
+ */
+export const frenoDeManoEje_2Map = new Map([]);
+/**
+ * All keys and values from the frenoDeManoEje_3 category in the excel file.
+ */
+export const frenoDeManoEje_3Map = new Map([]);
+/**
+ * All keys and values from the frenoDeManoEje_4 category in the excel file.
+ */
+export const frenoDeManoEje_4Map = new Map([]);
+/**
+ * All keys and values from the frenoDeManoEje_5 category in the excel file.
+ */
+export const frenoDeManoEje_5Map = new Map([]);
+/**
+ * All keys and values from the frenoDeManoEje_6 category in the excel file.
+ */
+export const frenoDeManoEje_6Map = new Map([]);
+/**
+ * All keys and values from the sonometro category in the excel file.
+ */
+export const sonometroMap = new Map([]);
+/**
+ * All keys and values from the luxometro category in the excel file.
+ */
+export const luxometroMap = new Map([]);
+/**
+ * All keys and values from the inspeccionVisual category in the excel file.
+ */
+export const inspeccionVisualMap = new Map([]);
+/**
+ * All keys and values from the inspeccionDH category in the excel file.
+ */
+export const inspeccionDHMap = new Map([]);
+/**
+ * All keys and values from the frenos category in the excel file.
+ */
+export const frenosMap = new Map([]);
+/**
+ * All keys and values from the valoresCalibrados category in the excel file.
+ */
+export const valoresCalibradosMap = new Map([]);
+/**
+ * All keys and values from the lineaDePrueba category in the excel file.
+ */
+export const lineaDePruebaMap = new Map([]);
+/**
+ * All keys and values from the estadisticaDePuestos category in the excel file.
+ */
+export const estadisticaDePuestosMap = new Map([]);
 
-]);
-export const suspencionEjeDelanteroMap = new Map([
-
-]);
-export const suspencionEjeTraseroMap = new Map([
-
-]);
-export const opacimetroMap = new Map([
-
-]);
-export const analizadorDeGasesMap = new Map([
-
-]);
-export const frenosEje_1Map = new Map([
-
-]);
-export const frenosEje_2Map = new Map([
-
-]);
-export const frenosEje_3Map = new Map([
-
-]);
-export const frenosEje_4Map = new Map([
-
-]);
-export const frenosEje_5Map = new Map([
-
-]);
-export const frenosEje_6Map = new Map([
-
-]);
-export const frenoDeManoEje_1Map = new Map([
-
-]);
-export const frenoDeManoEje_2Map = new Map([
-
-]);
-export const frenoDeManoEje_3Map = new Map([
-
-]);
-export const frenoDeManoEje_4Map = new Map([
-
-]);
-export const frenoDeManoEje_5Map = new Map([
-
-]);
-export const frenoDeManoEje_6Map = new Map([
-
-]);
-export const sonometroMap = new Map([
-
-]);
-export const luxometroMap = new Map([
-
-]);
-export const inspeccionVisualMap = new Map([
-
-]);
-export const inspeccionDHMap = new Map([
-
-]);
-export const frenosMap = new Map([
-
-]);
-export const valoresCalibradosMap = new Map([
-
-]);
-export const lineaDePruebaMap = new Map([
-
-]);
-export const estadisticaDePuestosMap = new Map([
-
-]);
-
+/**
+ * All keys and values from the noVinculados category in the excel file.
+ */
 export const noVinculadosMap = new Map();
 
-
+/**
+ *  Stores the map with the excel representation of data.
+ *  To remain as a comparison structure when the txt file is read and proccessed.
+ */
 export const structureFinalMap = new Map([
   [HEADER, headerMap],
   [ALINEACION, alineacionMap],
@@ -486,4 +667,3 @@ export const structureFinalMap = new Map([
   [ESTADISTICA_DE_PUESTOS, estadisticaDePuestosMap],
   [NO_VINCULADOS, noVinculadosMap],
 ]);
-

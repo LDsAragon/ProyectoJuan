@@ -1,4 +1,29 @@
-import { structureFinalMap, categories, headerMap, headerKeys } from "./constantMaps.js";
+import { structureFinalMap, categories, headerMap, headerKeys, alineacionKeys ,
+  suspencionEjeDelanteroKeys ,
+  suspencionEjeTraseroKeys ,
+  opacimetroKeys ,
+  analizadorDeGasesKeys ,
+  frenosEje_1Keys ,
+  frenosEje_2Keys ,
+  frenosEje_3Keys ,
+  frenosEje_4Keys ,
+  frenosEje_5Keys ,
+  frenosEje_6Keys ,
+  frenoDeManoEje_1Keys ,
+  frenoDeManoEje_2Keys ,
+  frenoDeManoEje_3Keys ,
+  frenoDeManoEje_4Keys ,
+  frenoDeManoEje_5Keys ,
+  frenoDeManoEje_6Keys ,
+  sonometroKeys ,
+  luxometroKeys ,
+  inspeccionVisualKeys ,
+  inspeccionDHKeys ,
+  frenosKeys ,
+  valoresCalibradosKeys ,
+  lineaDePruebaKeys ,
+  estadisticaDePuestosKeys ,
+  noVinculadosKeys  } from "./constantCollections.js";
 import { SEMICOLON,EMPTY,EMPTY_SPACE,NEW_LINE,TABS, HEADER } from "./constantVariables.js";
 import {structureMap} from "./globalVariables.js"; 
 // This didnt work as planned i have to wrap global variables into a function. More info appended to globalVariables.js
