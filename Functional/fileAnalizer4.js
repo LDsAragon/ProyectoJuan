@@ -297,9 +297,10 @@ function mapAlineacion(key, value, mappedAlineacion) {
 }
 
 /**
+ * Transforms the structureMap into a object 
+ * And returns it as a JSON 
  * 
- * 
- * @returns 
+ * @returns Jsonified global variable structureMap.
  */
 function transformMapToJson() {
   let obj = Object.fromEntries(structureMap);
