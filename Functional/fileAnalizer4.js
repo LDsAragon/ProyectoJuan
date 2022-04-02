@@ -64,6 +64,57 @@ import {
   TABS,
   HEADER,
   ALINEACION,
+  SUSPENSION_EJE_DELANTERO,
+  SUSPENSION_EJE_TRASERO,
+  OPACIMETRO,
+  ANALIZADOR_DE_GASES,
+  FRENOS_EJE_1,
+  FRENOS_EJE_2,
+  FRENOS_EJE_3,
+  FRENOS_EJE_4,
+  FRENOS_EJE_5,
+  FRENOS_EJE_6,
+  FRENO_DE_MANO_EJE_1,
+  FRENO_DE_MANO_EJE_2,
+  FRENO_DE_MANO_EJE_3,
+  FRENO_DE_MANO_EJE_4,
+  FRENO_DE_MANO_EJE_5,
+  FRENO_DE_MANO_EJE_6,
+  SONOMETRO,
+  LUXOMETRO,
+  INSPECCION_VISUAL,
+  INSPECCION_DH,
+  FRENOS,
+  VALORES_CALIBRADOS,
+  LINEA_DE_PRUEBA,
+  ESTADISTICA_DE_PUESTOS,
+  NO_VINCULADOS,
+  intHeader,
+  intAlineacion,
+  intSuspencionEjeDelantero,
+  intSuspencionEjeTrasero,
+  intOpacimetro,
+  intAnalizadorDeGases,
+  intFrenosEje_1,
+  intFrenosEje_2,
+  intFrenosEje_3,
+  intFrenosEje_4,
+  intFrenosEje_5,
+  intFrenosEje_6,
+  intFrenoDeManoEje_1,
+  intFrenoDeManoEje_2,
+  intFrenoDeManoEje_3,
+  intFrenoDeManoEje_4,
+  intFrenoDeManoEje_5,
+  intFrenoDeManoEje_6,
+  intSonometro,
+  intLuxometro,
+  intInspeccionVisual,
+  intInspeccionDH,
+  intFrenos,
+  intValoresCalibrados,
+  intLineaDePrueba,
+  intEstadisticaDePuesto,
 } from "./constantVariables.js";
 import { structureMap } from "./globalVariables.js";
 // This didnt work as planned i have to wrap global variables into a function. More info appended to globalVariables.js
@@ -178,7 +229,7 @@ function returnSetOfDataSF() {
   mapSingleFile = new Map();
 
   secondDivision.forEach(createMap);
-  console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
+  //console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
 
   return mapSingleFile;
 }
@@ -283,9 +334,45 @@ function populateStructure() {
   let mappedLineaDePrueba = new Map();
   let mappedEstadisticaDePuestos = new Map();
 
+  let collectionOfMaps = [
+    mappedHeader,
+    mappedAlineacion,
+    mappedSuspencionEjeDelantero,
+    mappedSuspencionEjeTrasero,
+    mappedOpacimetro,
+    mappedAnalizadorDeGases,
+    mappedFrenosEje_1,
+    mappedFrenosEje_2,
+    mappedFrenosEje_3,
+    mappedFrenosEje_4,
+    mappedFrenosEje_5,
+    mappedFrenosEje_6,
+    mappedFrenoDeManoEje_1,
+    mappedFrenoDeManoEje_2,
+    mappedFrenoDeManoEje_3,
+    mappedFrenoDeManoEje_4,
+    mappedFrenoDeManoEje_5,
+    mappedFrenoDeManoEje_6,
+    mappedSonometro,
+    mappedLuxometro,
+    mappedInspeccionVisual,
+    mappedInspeccionDH,
+    mappedFrenos,
+    mappedValoresCalibrados,
+    mappedLineaDePrueba,
+    mappedEstadisticaDePuestos,
+  ];
+
   /** Generates structure elements to be replaced on the model map */
   mapSingleFile.forEach(function (item, key, map) {
-    generateAllStructuresOnMap(item, key, map, mappedHeader, mappedAlineacion);
+    generateAllStructuresOnMap(
+      item,
+      key,
+      map,
+      mappedHeader,
+      mappedAlineacion,
+      collectionOfMaps
+    );
   });
 
   /** Beggining of elements replacing in structure map */
@@ -308,18 +395,16 @@ function populateStructure() {
  * @param {*} value current value from mapSingleFile
  * @param {*} key current key from mapSingleFile
  * @param {*} map the global object mapSingleFile
- * @param {*} mappedHeader the map that will store the new mapping of elements from.
- * @param {*} mappedAlineacion the map that will store the new mapping of elements from.
+ * @param {*} collectionOfMaps the maps that will store the new mapping of elements from.
  */
 function generateAllStructuresOnMap(
   value,
   key,
   map,
-  mappedHeader,
-  mappedAlineacion
+  collectionOfMaps
 ) {
-  mapHeader(key, value, mappedHeader);
-  mapAlineacion(key, value, mappedAlineacion);
+  mapHeader(key, value, collectionOfMaps[intHeader]);
+  mapAlineacion(key, value, collectionOfMaps[intAlineacion]);
 }
 
 /**
@@ -355,14 +440,28 @@ function mapHeader(key, value, mappedHeader) {
 function mapAlineacion(key, value, mappedAlineacion) {
   for (var i = 0; i < alineacionKeys.length; i++) {
     if (key == alineacionKeys[i]) {
-      //console.log(`Esta llave [${key}] `);
-      //console.log(`Este valor [${value}] `);
-      //console.log(`Esta llave [${alineacionKeys[i]}] se llama ${alineacionMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${alineacionKeys[i]}`);
-
       mappedAlineacion.set(alineacionMap.get(key), mapSingleFile.get(key));
     }
   }
   return mappedAlineacion;
+}
+
+/**
+ * Function to be called in a for each loop of the global variable mapSingleFile
+ * Function that maps the suspensionEjeDelantero structure
+ *
+ * @param {*} key current key from mapSingleFile
+ * @param {*} value current value from mapSingleFile
+ * @param {*} mappedSuspencionEjeDelantero the placeholder for data to be mapped into from data in the mapSingleFile global variable
+ * @returns the new constructed map with data from the mapSingleFile global variable
+ */
+ function mapSuspencionEjeDelantero(key, value, mappedSuspencionEjeDelantero) {
+  for (var i = 0; i < suspencionEjeDelanteroKeys.length; i++) {
+    if (key == suspencionEjeDelanteroKeys[i]) {
+      mappedSuspencionEjeDelantero.set(suspencionEjeDelanteroMap.get(key), mapSingleFile.get(key));
+    }
+  }
+  return mappedSuspencionEjeDelantero;
 }
 
 /**
@@ -380,9 +479,8 @@ function transformMapToJson() {
   let alineacionObj = Object.fromEntries(structureMap.get(ALINEACION));
   obj.alineacion = alineacionObj;
 
-   let jsonString = JSON.stringify(obj,null,TABS); // Stringify with tabs
+  let jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs
   //let jsonString = JSON.stringify(obj); // just the minimized json
-  console.log(jsonString);
 
   return jsonString;
 }
