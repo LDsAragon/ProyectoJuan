@@ -4,6 +4,7 @@ const NEW_LINE = "\r\n";
 const EMPTY_SPACE = " ";
 const EMPTY = "";
 const DOT_COMA = ";";
+const TABS = "\t"
 
 let singleFileData = [];
 let mapSingleFile = new Map();
@@ -221,7 +222,7 @@ function transformMapToJson(map) {
   let headerObj = Object.fromEntries(map.get("HEADER"));
   obj.HEADER = headerObj;
 
-  let jsonString = JSON.stringify(obj);
+  let jsonString = JSON.stringify(obj,null,TABS); // Stringify with tabs
   console.log(jsonString);
 
   return jsonString;
