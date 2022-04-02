@@ -338,160 +338,115 @@ export const headerKeys = [
 /**
  * All keys from the alineacion category in the excel file.
  */
-export const alineacionKeys = [ 
-
-] ;
+export const alineacionKeys = [
+  "30100",
+  "30101",
+  "30102",
+  "30103",
+  "30104",
+  "30105",
+];
 /**
  * All keys from the suspencionEjeDelantero category in the excel file.
  */
-export const suspencionEjeDelanteroKeys = [ 
-
-] ;
+export const suspencionEjeDelanteroKeys = [];
 /**
  * All keys from the suspencionEjeTrasero category in the excel file.
  */
-export const suspencionEjeTraseroKeys = [ 
-
-] ;
+export const suspencionEjeTraseroKeys = [];
 /**
  * All keys from the opacimetro category in the excel file.
  */
-export const opacimetroKeys = [ 
-
-] ;
+export const opacimetroKeys = [];
 /**
  * All keys from the analizadorDeGases category in the excel file.
  */
-export const analizadorDeGasesKeys = [ 
-
-] ;
+export const analizadorDeGasesKeys = [];
 /**
  * All keys from the frenosEje_1 category in the excel file.
  */
-export const frenosEje_1Keys = [ 
-
-] ;
+export const frenosEje_1Keys = [];
 /**
  * All keys from the frenosEje_2 category in the excel file.
  */
-export const frenosEje_2Keys = [ 
-
-] ;
+export const frenosEje_2Keys = [];
 /**
  * All keys from the frenosEje category in the excel file.
  */
-export const frenosEje_3Keys = [ 
-
-] ;
+export const frenosEje_3Keys = [];
 /**
  * All keys from the frenosEje_4 category in the excel file.
  */
-export const frenosEje_4Keys = [ 
-
-] ;
+export const frenosEje_4Keys = [];
 /**
  * All keys from the frenosEje_5 category in the excel file.
  */
-export const frenosEje_5Keys = [ 
-
-] ;
+export const frenosEje_5Keys = [];
 /**
  * All keys from the frenosEje_6 category in the excel file.
  */
-export const frenosEje_6Keys = [ 
-
-] ;
+export const frenosEje_6Keys = [];
 /**
  * All keys from the frenoDeManoEje_1 category in the excel file.
  */
-export const frenoDeManoEje_1Keys = [ 
-
-] ;
+export const frenoDeManoEje_1Keys = [];
 /**
  * All keys from the frenoDeManoEje_2 category in the excel file.
  */
-export const frenoDeManoEje_2Keys = [ 
-
-] ;
+export const frenoDeManoEje_2Keys = [];
 /**
  * All keys from the frenoDeManoEje_3 category in the excel file.
  */
-export const frenoDeManoEje_3Keys = [ 
-
-] ;
+export const frenoDeManoEje_3Keys = [];
 /**
  * All keys from the frenoDeManoEje_4 category in the excel file.
  */
-export const frenoDeManoEje_4Keys = [ 
-
-] ;
+export const frenoDeManoEje_4Keys = [];
 /**
  * All keys from the frenoDeManoEje_5 category in the excel file.
  */
-export const frenoDeManoEje_5Keys = [ 
-
-] ;
+export const frenoDeManoEje_5Keys = [];
 /**
  * All keys from the frenoDeManoEje_6 category in the excel file.
  */
-export const frenoDeManoEje_6Keys = [ 
-
-] ;
+export const frenoDeManoEje_6Keys = [];
 /**
  * All keys from the sonometro category in the excel file.
  */
-export const sonometroKeys = [ 
-
-] ;
+export const sonometroKeys = [];
 /**
  * All keys from the luxometro category in the excel file.
  */
-export const luxometroKeys = [ 
-
-] ;
+export const luxometroKeys = [];
 /**
  * All keys from the inspeccionVisual category in the excel file.
  */
-export const inspeccionVisualKeys = [ 
-
-] ;
+export const inspeccionVisualKeys = [];
 /**
  * All keys from the inspeccionDH category in the excel file.
  */
-export const inspeccionDHKeys = [ 
-
-] ;
+export const inspeccionDHKeys = [];
 /**
  * All keys from the frenos category in the excel file.
  */
-export const frenosKeys = [ 
-
-] ;
+export const frenosKeys = [];
 /**
  * All keys from the valoresCalibrados category in the excel file.
  */
-export const valoresCalibradosKeys = [ 
-
-] ;
+export const valoresCalibradosKeys = [];
 /**
  * All keys from the lineaDePrueba category in the excel file.
  */
-export const lineaDePruebaKeys = [ 
-
-] ;
+export const lineaDePruebaKeys = [];
 /**
  * All keys from the estadisticaDePuestos category in the excel file.
  */
-export const estadisticaDePuestosKeys = [ 
-
-] ;
+export const estadisticaDePuestosKeys = [];
 
 /**
  * All keys from the noVinculados category in the excel file.
  */
-export const noVinculadosKeys = [ 
-
-] 
+export const noVinculadosKeys = [];
 /**
  * All keys and values from the header category in the excel file.
  */
@@ -531,7 +486,14 @@ export const headerMap = new Map([
 /**
  * All keys and values from the alineacion category in the excel file.
  */
-export const alineacionMap = new Map([]);
+export const alineacionMap = new Map([
+  ["30100", "Resultado Alineación Eje 1"],
+  ["30101", "Resultado Alineación Eje 2"],
+  ["30102", "Resultado Alineación Eje 3"],
+  ["30103", "Resultado Alineación Eje 4"],
+  ["30104", "Resultado Alineación Eje 5"],
+  ["30105", "Resultado Alineación Eje 6"],
+]);
 /**
  * All keys and values from the suspencionEjeDelantero category in the excel file.
  */
