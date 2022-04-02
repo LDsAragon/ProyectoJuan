@@ -380,8 +380,8 @@ function transformMapToJson() {
   let alineacionObj = Object.fromEntries(structureMap.get(ALINEACION));
   obj.alineacion = alineacionObj;
 
-  // let jsonString = JSON.stringify(obj,null,TABS); // Stringify with tabs
-  let jsonString = JSON.stringify(obj); // just the minimized json
+   let jsonString = JSON.stringify(obj,null,TABS); // Stringify with tabs
+  //let jsonString = JSON.stringify(obj); // just the minimized json
   console.log(jsonString);
 
   return jsonString;

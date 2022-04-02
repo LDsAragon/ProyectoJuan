@@ -28,7 +28,7 @@ body {
 	margin: 15px 0 0 0;
 }
 
-#contents, #jsonContainer {
+#contents {
 	margin: 15px 0 0 0;
 	display: none;
 	text-align: left;
@@ -37,4 +37,19 @@ body {
 	font-size: 13px;
 	max-height: 300px;
 	overflow: auto;
+}
+
+#jsonContainer {
+	margin: 15px 0 0 0;
+	display: none;
+	text-align: left;
+	background-color: rgba(0,0,0,0.1);
+	padding: 10px;
+	font-size: 13px;
+	max-height: auto;
+	overflow: auto;
+}
+
+pre{
+	background-color: #6c9bca ;
 }
