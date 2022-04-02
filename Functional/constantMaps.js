@@ -1,3 +1,36 @@
+import {
+  HEADER,
+  ALINEACION,
+  SUSPENSION_EJE_DELANTERO,
+  SUSPENSION_EJE_TRASERO,
+  OPACIMETRO,
+  ANALIZADOR_DE_GASES,
+  FRENOS_EJE_1,
+  FRENOS_EJE_2,
+  FRENOS_EJE_3,
+  FRENOS_EJE_4,
+  FRENOS_EJE_5,
+  FRENOS_EJE_6,
+  FRENO_DE_MANO_EJE_1,
+  FRENO_DE_MANO_EJE_2,
+  FRENO_DE_MANO_EJE_3,
+  FRENO_DE_MANO_EJE_4,
+  FRENO_DE_MANO_EJE_5,
+  FRENO_DE_MANO_EJE_6,
+  SONOMETRO,
+  LUXOMETRO,
+  INSPECCION_VISUAL,
+  INSPECCION_DH,
+  FRENOS,
+  VALORES_CALIBRADOS,
+  LINEA_DE_PRUEBA,
+  ESTADISTICA_DE_PUESTOS,
+  NO_VINCULADOS,
+} from "./constantVariables.js";
+
+/**
+ * File to load all maps and static data used for comparison against the text file. 
+ */
 
 
 
@@ -5,11 +38,10 @@
 
 
 
-
-
-
-
-export const characteristics = [
+/**
+ * Dirty Categories used to clean the trash data from the read file.
+ */
+export const categories = [
   "[HEADER]",
   "Datos Vehículo",
   "Datos Propietario",
@@ -34,7 +66,9 @@ export const characteristics = [
   "999999=END OF FILE",
   "[DATAOUT]",
 ];
-
+/**
+ * All data from the excel, just in case.
+ */
 export const fieldNamingMap = new Map([
   ["10100", "Patente"],
   ["10102", "Numero de Chasis"],
@@ -275,7 +309,10 @@ export const fieldNamingMap = new Map([
   ["80040", "Nro de Línea Pto10"],
 ]);
 
-export const headerArray = [
+/**
+ * All keys from the header category in the excel file.
+ */
+export const headerKeys = [
   "10100",
   "10102",
   "10104",
@@ -341,32 +378,112 @@ export const headerMap = new Map([
   ["15008", "Prueba Sonometro"],
 ]);
 
+export const alineacionMap = new Map([
 
-export let structureMap = new Map([
-  ["HEADER", headerMap],
-  ["ALINEACIÓN", []],
-  ["SUSPENSIÓN Eje Delantero", []],
-  ["SUSPENSIÓN Eje Trasero", []],
-  ["OPACIMETRO", []],
-  ["Analizador de Gases", []],
-  ["FRENOS Eje 1 ", []],
-  ["FRENOS Eje 2", []],
-  ["FRENOS Eje 3", []],
-  ["FRENOS Eje 4", []],
-  ["FRENOS Eje 5", []],
-  ["FRENOS Eje 6", []],
-  ["FRENO de Mano Eje 1", []],
-  ["FRENO de Mano Eje 2", []],
-  ["FRENO de Mano Eje 3", []],
-  ["FRENO de Mano Eje 4", []],
-  ["FRENO de Mano Eje 5", []],
-  ["FRENO de Mano Eje 6", []],
-  ["Sonómetro", []],
-  ["Luxómetro", []],
-  ["Inspección Visual", []],
-  ["Inspección DH", []],
-  ["FRENOS", []],
-  ["Valores     Calibrados", []],
-  ["Línea de Prueba", []],
-  ["Estadística de Puestos", []],
 ]);
+export const suspencionEjeDelanteroMap = new Map([
+
+]);
+export const suspencionEjeTraseroMap = new Map([
+
+]);
+export const opacimetroMap = new Map([
+
+]);
+export const analizadorDeGasesMap = new Map([
+
+]);
+export const frenosEje_1Map = new Map([
+
+]);
+export const frenosEje_2Map = new Map([
+
+]);
+export const frenosEje_3Map = new Map([
+
+]);
+export const frenosEje_4Map = new Map([
+
+]);
+export const frenosEje_5Map = new Map([
+
+]);
+export const frenosEje_6Map = new Map([
+
+]);
+export const frenoDeManoEje_1Map = new Map([
+
+]);
+export const frenoDeManoEje_2Map = new Map([
+
+]);
+export const frenoDeManoEje_3Map = new Map([
+
+]);
+export const frenoDeManoEje_4Map = new Map([
+
+]);
+export const frenoDeManoEje_5Map = new Map([
+
+]);
+export const frenoDeManoEje_6Map = new Map([
+
+]);
+export const sonometroMap = new Map([
+
+]);
+export const luxometroMap = new Map([
+
+]);
+export const inspeccionVisualMap = new Map([
+
+]);
+export const inspeccionDHMap = new Map([
+
+]);
+export const frenosMap = new Map([
+
+]);
+export const valoresCalibradosMap = new Map([
+
+]);
+export const lineaDePruebaMap = new Map([
+
+]);
+export const estadisticaDePuestosMap = new Map([
+
+]);
+
+export const noVinculadosMap = new Map();
+
+
+export const structureFinalMap = new Map([
+  [HEADER, headerMap],
+  [ALINEACION, alineacionMap],
+  [SUSPENSION_EJE_DELANTERO, suspencionEjeDelanteroMap],
+  [SUSPENSION_EJE_TRASERO, suspencionEjeTraseroMap],
+  [OPACIMETRO, opacimetroMap],
+  [ANALIZADOR_DE_GASES, analizadorDeGasesMap],
+  [FRENOS_EJE_1, frenosEje_1Map],
+  [FRENOS_EJE_2, frenosEje_2Map],
+  [FRENOS_EJE_3, frenosEje_3Map],
+  [FRENOS_EJE_4, frenosEje_4Map],
+  [FRENOS_EJE_5, frenosEje_5Map],
+  [FRENOS_EJE_6, frenosEje_6Map],
+  [FRENO_DE_MANO_EJE_1, frenoDeManoEje_1Map],
+  [FRENO_DE_MANO_EJE_2, frenoDeManoEje_2Map],
+  [FRENO_DE_MANO_EJE_3, frenoDeManoEje_3Map],
+  [FRENO_DE_MANO_EJE_4, frenoDeManoEje_4Map],
+  [FRENO_DE_MANO_EJE_5, frenoDeManoEje_5Map],
+  [FRENO_DE_MANO_EJE_6, frenoDeManoEje_6Map],
+  [SONOMETRO, sonometroMap],
+  [LUXOMETRO, luxometroMap],
+  [INSPECCION_VISUAL, inspeccionVisualMap],
+  [INSPECCION_DH, inspeccionDHMap],
+  [FRENOS, frenosMap],
+  [VALORES_CALIBRADOS, valoresCalibradosMap],
+  [LINEA_DE_PRUEBA, lineaDePruebaMap],
+  [ESTADISTICA_DE_PUESTOS, estadisticaDePuestosMap],
+  [NO_VINCULADOS, noVinculadosMap],
+]);
+

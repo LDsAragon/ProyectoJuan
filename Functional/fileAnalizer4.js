@@ -1,13 +1,22 @@
-import { structureMap, characteristics, headerMap, headerArray } from "./constantMaps.js";
+import { structureFinalMap, categories, headerMap, headerKeys } from "./constantMaps.js";
+import { SEMICOLON,EMPTY,EMPTY_SPACE,NEW_LINE,TABS, HEADER } from "./constantVariables.js";
+import {structureMap} from "./globalVariables.js"; 
+// This didnt work as planned i have to wrap global variables into a function. More info appended to globalVariables.js
+// import {singleFileData,mapSingleFile} from "./globalVariables.js"; 
 
-const NEW_LINE = "\r\n";
-const EMPTY_SPACE = " ";
-const EMPTY = "";
-const DOT_COMA = ";";
-const TABS = "\t"
+/**
+ *   Global Variable
+ *   Is used to store the value of the read file. 
+ *   While it's cleaned trimed parsed and deconstructed
+ */
+ let singleFileData = [];
 
-let singleFileData = [];
-let mapSingleFile = new Map();
+ /**
+  *  Global Variable 
+  *  Will hold data from the txt file 
+  *  already parsed, cleaned and deconstructed.
+  */
+ let mapSingleFile = new Map();
 
 
 // Handle multiple fileuploads
@@ -35,28 +44,42 @@ document.getElementById("file-input").addEventListener(
       singleFileData.push(values.toString());
     });
 
-    document.getElementById("singleFileButton").click();
-
+    setTimeout(function(){
+      document.getElementById("singleFileButton").click();
+    },20);
+   
   },
   false
 );
 
+/**
+ * Button to parse data from file into json and print in text
+ * As it can be called async the if validates that significative data is worth showing.
+ */
 document.getElementById("singleFileButton").addEventListener(
   "click",
   function (ev) {
-    returnSetOfDataSF(singleFileData);
-    populateStructure();
+    let fileData = returnSetOfDataSF();
+    let transformedMap = populateStructure();
     let text = transformMapToJson(structureMap);
-    document.querySelector("#jsonContainer").innerHTML = text;
-    document.querySelector("#jsonContainer").style.display = 'block';
+
+    if(transformedMap !== structureFinalMap){
+      document.querySelector("#jsonContainer").innerHTML = text;
+      document.querySelector("#jsonContainer").style.display = 'block';
+    }
+
+
   },
   false
 );
 
 
 /**
- *  Simple JavaScript Promise that reads a file as text.
- **/
+ * Simple JavaScript Promise that reads a file as text.
+ * 
+ * @param {*} file A file to read 
+ * @returns returns a promise with the file read 
+ */
 function readFileAsText(file) {
   return new Promise(function (resolve, reject) {
     let fr = new FileReader();
@@ -73,24 +96,33 @@ function readFileAsText(file) {
   });
 }
 
+
 /**
- * Reads an array an normalices the data in it
+ * Reads an array an normalices the data in it to a map
  * it asumes the array has only one object
- **/
-function returnSetOfDataSF(file) {
+ * 
+ * @returns  the map with normalized uncategorized and deconstructed data.
+ */
+function returnSetOfDataSF() {
   // Abort if there were no files selected
-  if (!file.length) return;
+  if (!singleFileData.length) return;
 
-  let sanitizedFileData = cleanCharacteristics(file[0]);
 
+  let sanitizedFileData = cleanCategories(singleFileData[0]);
+
+  // split by newline separator
   let firstDivisionArr = sanitizedFileData.split(NEW_LINE);
 
+  // clean empty, semicolons, and blank spaces
   let secondDivision = cleanElementsOfArray(firstDivisionArr);
 
-  mapSingleFile = new Map(); // clean previous map
+  // clean previous map
+  mapSingleFile = new Map(); 
 
   secondDivision.forEach(createMap);
   console.log("Termine ^_^ mapSingleFile" + mapSingleFile);
+
+  return mapSingleFile;
 }
 
 function createMap(item, index, arr) {
@@ -101,21 +133,31 @@ function createMap(item, index, arr) {
 }
 
 /**
- * Clean each characteristic of the data
+ * Clean each garbage categories from the file read.
+ * 
+ * @param {*} data a stirng of text from the file read.
+ * @returns a string of text clean from categories.
  */
-function cleanCharacteristics(data) {
+function cleanCategories(data) {
   let result = data != undefined ? data : "";
 
-  for (var i = 0; i < characteristics.length; i++) {
-    let replaceCharacteristic = characteristics[i] + "\r\n";
-    result = result.replace(replaceCharacteristic, "");
+  for (var i = 0; i < categories.length; i++) {
+    let replaceCategories = categories[i] + "\r\n";
+    result = result.replace(replaceCategories, "");
   }
 
   return result;
 }
 
 /**
- * clean each element of the array from comas blank spaces and new lines at end of file
+ * Clean each element of the array from
+ * - semicolons
+ * - blank spaces and
+ * - new lines at end of file
+ * - and empty slots created by new lines at initial split of file
+ * 
+ * @param {*} data an array of splited text by NEW_LINE from the file read
+ * @returns a very clean and tidy array, such wow, such clean.
  */
 function cleanElementsOfArray(data) {
   // Abort if there were no files selected
@@ -125,28 +167,37 @@ function cleanElementsOfArray(data) {
 
   for (var i = 0; i < data.length; i++) {
     result[i] = result[i].replaceAll(EMPTY_SPACE, "");
-    result[i] = result[i].replaceAll(DOT_COMA, "");
+    result[i] = result[i].replaceAll(SEMICOLON, "");
     result[i] = result[i].replaceAll(NEW_LINE, "");
     result[i] = result[i].trim();
   }
 
-  result = cleanArray(result);
+  result = cleanArrayOfEmpty(result);
 
   return result;
 }
+
 /**
- * remove empty_SPACE elements and return a new array
+ * 
+ * Remove empty_SPACE elements and return a new array
+ * 
+ * @param {*} dirtyOne the array to clean
+ * @returns  A new array with no empty spaces
  */
-function cleanArray(actual) {
+function cleanArrayOfEmpty(dirtyOne) {
   var newArray = new Array();
-  for (var i = 0; i < actual.length; i++) {
-    if (actual[i]) {
-      newArray.push(actual[i]);
+  for (var i = 0; i < dirtyOne.length; i++) {
+    if (dirtyOne[i]) {
+      newArray.push(dirtyOne[i]);
     }
   }
   return newArray;
 }
-
+/**
+ * Populates the structureMap with the data from the txt file stored in mapSinfleFile
+ * 
+ * @returns the structuredMap global object with each generated content replacing the placeholder.
+ */
 function populateStructure() {
   let mappedHeader = new Map();
   let mappedAlineacion = new Map();
@@ -175,40 +226,69 @@ function populateStructure() {
   let mappedLineaDePrueba = new Map();
   let mappedEstadisticaDePuestos = new Map();
 
+  /** Generates structure elements to be replaced on the model map */
   mapSingleFile.forEach(function (item, key, map) {
-    populateAllStructuresOnMap(item, key, map, mappedHeader);
+    generateAllStructuresOnMap(item, key, map, mappedHeader);
   });
 
+  /** Beggining of elements replacing in structure map */
   if (mappedHeader.size > 0) {
-    structureMap.set("HEADER", mappedHeader);
+    structureMap.set(HEADER, mappedHeader);
     console.log(structureMap);
   }
 
   return structureMap;
 }
 
-function populateAllStructuresOnMap(value, key, map, mappedHeader) {
+/**
+ * Function to be called in a for each loop of the global variable mapSingleFile
+ * Constructs the mappedCategories of structureMap
+ * 
+ * @param {*} value current value from mapSingleFile
+ * @param {*} key current key from mapSingleFile
+ * @param {*} map the global object mapSingleFile
+ * @param {*} mappedHeader the map that will store the new mapping of elements from 
+ */
+function generateAllStructuresOnMap(value, key, map, mappedHeader) {
   mapHeader(key, value, mappedHeader);
 }
+
+/**
+ * Function to be called in a for each loop of the global variable mapSingleFile
+ * Function that maps the header structure
+ * 
+ * @param {*} key current key from mapSingleFile
+ * @param {*} value current value from mapSingleFile
+ * @param {*} mappedHeader the placeholder for data to be mapped into from data in the mapSingleFile global variable
+ * @returns the new constructed map with data from the mapSingleFile global variable
+ */
 function mapHeader(key, value, mappedHeader) {
-  for (var i = 0; i < headerArray.length; i++) {
-    if (key == headerArray[i]) {
+  for (var i = 0; i < headerKeys.length; i++) {
+    if (key == headerKeys[i]) {
       //console.log(`Esta llave [${key}] `);
       //console.log(`Este valor [${value}] `);
-      //console.log(`Esta llave [${headerArray[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerArray[i]}`);
+      //console.log(`Esta llave [${headerKeys[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerKeys[i]}`);
 
       mappedHeader.set(headerMap.get(key), mapSingleFile.get(key));
     }
   }
   return mappedHeader;
 }
-
+/**
+ * Function to be called in a for each loop of the global variable mapSingleFile
+ * Function that maps the alineacion structure
+ * 
+ * @param {*} key current key from mapSingleFile
+ * @param {*} value current value from mapSingleFile
+ * @param {*} mappedAlineacion the placeholder for data to be mapped into from data in the mapSingleFile global variable
+ * @returns the new constructed map with data from the mapSingleFile global variable
+ */
 function mapAlineacion(key, value, mappedAlineacion) {
-  for (var i = 0; i < headerArray.length; i++) {
-    if (key == headerArray[i]) {
+  for (var i = 0; i < headerKeys.length; i++) {
+    if (key == headerKeys[i]) {
       //console.log(`Esta llave [${key}] `);
       //console.log(`Este valor [${value}] `);
-      //console.log(`Esta llave [${headerArray[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerArray[i]}`);
+      //console.log(`Esta llave [${headerKeys[i]}] se llama ${headerMap.get(key)} Tiene por valor ${mapSingleFile.get(key)} pertenece al elemento header ${headerKeys[i]}`);
 
       mappedAlineacion.set(headerMap.get(key), mapSingleFile.get(key));
     }
@@ -216,13 +296,19 @@ function mapAlineacion(key, value, mappedAlineacion) {
   return mappedAlineacion;
 }
 
-function transformMapToJson(map) {
-  let obj = Object.fromEntries(map);
+/**
+ * 
+ * 
+ * @returns 
+ */
+function transformMapToJson() {
+  let obj = Object.fromEntries(structureMap);
 
-  let headerObj = Object.fromEntries(map.get("HEADER"));
-  obj.HEADER = headerObj;
+  let headerObj = Object.fromEntries(structureMap.get(HEADER));
+  obj.header = headerObj;
 
-  let jsonString = JSON.stringify(obj,null,TABS); // Stringify with tabs
+  // let jsonString = JSON.stringify(obj,null,TABS); // Stringify with tabs
+  let jsonString = JSON.stringify(obj); // just the minimized json
   console.log(jsonString);
 
   return jsonString;
