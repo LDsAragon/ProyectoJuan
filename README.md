@@ -3,7 +3,7 @@
 Forma de usarlo: 
 
 
-1- Levantar el read-file html con live server en vs code.
+1- Levantar el read-file html con live server en vs code. Esta en la carpeta Functional. 
 
 2- Seleccionar un archivo de texto con "Choose text file" de los archivos de texto en la carpeta TestData.
 
