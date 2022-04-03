@@ -127,112 +127,108 @@ export const LINEA_DE_PRUEBA = "lineaDePrueba";
  * Name of the key "estadísticaDePuestos" from the structureMap in file constantMaps.js
  */
 export const ESTADISTICA_DE_PUESTOS = "estadísticaDePuestos";
-/**
- * Name of the key "noVinculados" from the structureMap in file constantMaps.js
- */
-export const NO_VINCULADOS = "noVinculados";
 
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intHeader = 0 ;
+export const intHeader = 0;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intAlineacion = 1 ;
+export const intAlineacion = 1;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intSuspencionEjeDelantero = 2 ;
+export const intSuspencionEjeDelantero = 2;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intSuspencionEjeTrasero = 3 ;
+export const intSuspencionEjeTrasero = 3;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intOpacimetro = 4 ;
+export const intOpacimetro = 4;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intAnalizadorDeGases = 5 ;
+export const intAnalizadorDeGases = 5;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenosEje_1 = 6 ;
+export const intFrenosEje_1 = 6;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenosEje_2 = 7 ;
+export const intFrenosEje_2 = 7;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenosEje_3 = 8 ;
+export const intFrenosEje_3 = 8;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenosEje_4 = 9 ;
+export const intFrenosEje_4 = 9;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenosEje_5 = 10 ;
+export const intFrenosEje_5 = 10;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenosEje_6 = 11 ;
+export const intFrenosEje_6 = 11;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenoDeManoEje_1 = 12 ;
+export const intFrenoDeManoEje_1 = 12;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenoDeManoEje_2 = 13 ;
+export const intFrenoDeManoEje_2 = 13;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenoDeManoEje_3 = 14 ;
+export const intFrenoDeManoEje_3 = 14;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenoDeManoEje_4 = 15 ;
+export const intFrenoDeManoEje_4 = 15;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenoDeManoEje_5 = 16 ;
+export const intFrenoDeManoEje_5 = 16;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenoDeManoEje_6 = 17 ;
+export const intFrenoDeManoEje_6 = 17;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intSonometro = 18 ;
+export const intSonometro = 18;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intLuxometro = 19 ;
+export const intLuxometro = 19;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intInspeccionVisual = 20 ;
+export const intInspeccionVisual = 20;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intInspeccionDH = 21 ;
+export const intInspeccionDH = 21;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intFrenos = 22 ;
+export const intFrenos = 22;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intValoresCalibrados = 23 ;
+export const intValoresCalibrados = 23;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intLineaDePrueba = 24 ;
+export const intLineaDePrueba = 24;
 /**
  * Identifier for selecction of map in collection of Arrays
  */
-export const intEstadisticaDePuesto = 25 ;
+export const intEstadisticaDePuesto = 25;

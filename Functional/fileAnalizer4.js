@@ -27,7 +27,6 @@ import {
   valoresCalibradosMap,
   lineaDePruebaMap,
   estadisticaDePuestosMap,
-  noVinculadosMap,
   headerKeys,
   alineacionKeys,
   suspencionEjeDelanteroKeys,
@@ -54,8 +53,7 @@ import {
   valoresCalibradosKeys,
   lineaDePruebaKeys,
   estadisticaDePuestosKeys,
-  noVinculadosKeys,
-  collectionOfVariables ,
+  collectionOfVariables,
 } from "./constantCollections.js";
 import {
   SEMICOLON,
@@ -89,7 +87,6 @@ import {
   VALORES_CALIBRADOS,
   LINEA_DE_PRUEBA,
   ESTADISTICA_DE_PUESTOS,
-  NO_VINCULADOS,
   intHeader,
   intAlineacion,
   intSuspencionEjeDelantero,
@@ -366,23 +363,16 @@ function populateStructure() {
 
   /** Generates structure elements to be replaced on the model map */
   mapSingleFile.forEach(function (item, key, map) {
-    generateAllStructuresOnMap(
-      item,
-      key,
-      map,
-      collectionOfMaps,
-    );
+    generateAllStructuresOnMap(item, key, map, collectionOfMaps);
   });
 
   /** Replace elements in structure map if they where updated, instantiate empty map them if unchanged */
-  for (let i = 0; i < collectionOfMaps.length ; i++) {
-    
+  for (let i = 0; i < collectionOfMaps.length; i++) {
     if (collectionOfMaps[i].size > 0) {
       structureMap.set(collectionOfVariables[i], collectionOfMaps[i]);
     } else {
       structureMap.set(collectionOfVariables[i], new Map());
     }
-
   }
 
   return structureMap;
@@ -397,37 +387,40 @@ function populateStructure() {
  * @param {*} map the global object mapSingleFile
  * @param {*} collectionOfMaps the maps that will store the new mapping of elements from.
  */
-function generateAllStructuresOnMap(
-  value,
-  key,
-  map,
-  collectionOfMaps,
-) {
+function generateAllStructuresOnMap(value, key, map, collectionOfMaps) {
   mapHeader(key, value, collectionOfMaps[intHeader]);
   mapAlineacion(key, value, collectionOfMaps[intAlineacion]);
-  mapSuspencionEjeDelantero(key, value, collectionOfMaps[intSuspencionEjeDelantero]);
-  mapSuspencionEjeTrasero(key, value, collectionOfMaps[intSuspencionEjeTrasero]);
-  mapOpacimetro(key,value, collectionOfMaps[intOpacimetro])
-  mapAnalizadorDeGases(key,value, collectionOfMaps[intAnalizadorDeGases])
-  mapFrenosEje_1(key,value, collectionOfMaps[intFrenosEje_1])
-  mapFrenosEje_2(key,value, collectionOfMaps[intFrenosEje_2])
-  mapFrenosEje_3(key,value, collectionOfMaps[intFrenosEje_3])
-  mapFrenosEje_4(key,value, collectionOfMaps[intFrenosEje_4])
-  mapFrenosEje_5(key,value, collectionOfMaps[intFrenosEje_5])
-  mapFrenosEje_6(key,value, collectionOfMaps[intFrenosEje_6])
-  mapFrenoDeManoEje_1(key,value, collectionOfMaps[intFrenoDeManoEje_1])
-  mapFrenoDeManoEje_2(key,value, collectionOfMaps[intFrenoDeManoEje_2])
-  mapFrenoDeManoEje_3(key,value, collectionOfMaps[intFrenoDeManoEje_3])
-  mapFrenoDeManoEje_4(key,value, collectionOfMaps[intFrenoDeManoEje_4])
-  mapFrenoDeManoEje_5(key,value, collectionOfMaps[intFrenoDeManoEje_5])
-  mapFrenoDeManoEje_6(key,value, collectionOfMaps[intFrenoDeManoEje_6])
-  mapSonometro(key,value, collectionOfMaps[intSonometro])
-  mapInspeccionVisual(key,value, collectionOfMaps[intInspeccionVisual])
-  mapInspeccionDH(key,value, collectionOfMaps[intInspeccionDH])
-  mapFrenos(key,value, collectionOfMaps[intFrenos])
-  mapValoresCalibrados(key,value, collectionOfMaps[intValoresCalibrados])
-  mapLineaDePrueba(key,value, collectionOfMaps[intLineaDePrueba])
-  mapEstadísticaDePuestos(key,value, collectionOfMaps[intEstadisticaDePuesto])
+  mapSuspencionEjeDelantero(
+    key,
+    value,
+    collectionOfMaps[intSuspencionEjeDelantero]
+  );
+  mapSuspencionEjeTrasero(
+    key,
+    value,
+    collectionOfMaps[intSuspencionEjeTrasero]
+  );
+  mapOpacimetro(key, value, collectionOfMaps[intOpacimetro]);
+  mapAnalizadorDeGases(key, value, collectionOfMaps[intAnalizadorDeGases]);
+  mapFrenosEje_1(key, value, collectionOfMaps[intFrenosEje_1]);
+  mapFrenosEje_2(key, value, collectionOfMaps[intFrenosEje_2]);
+  mapFrenosEje_3(key, value, collectionOfMaps[intFrenosEje_3]);
+  mapFrenosEje_4(key, value, collectionOfMaps[intFrenosEje_4]);
+  mapFrenosEje_5(key, value, collectionOfMaps[intFrenosEje_5]);
+  mapFrenosEje_6(key, value, collectionOfMaps[intFrenosEje_6]);
+  mapFrenoDeManoEje_1(key, value, collectionOfMaps[intFrenoDeManoEje_1]);
+  mapFrenoDeManoEje_2(key, value, collectionOfMaps[intFrenoDeManoEje_2]);
+  mapFrenoDeManoEje_3(key, value, collectionOfMaps[intFrenoDeManoEje_3]);
+  mapFrenoDeManoEje_4(key, value, collectionOfMaps[intFrenoDeManoEje_4]);
+  mapFrenoDeManoEje_5(key, value, collectionOfMaps[intFrenoDeManoEje_5]);
+  mapFrenoDeManoEje_6(key, value, collectionOfMaps[intFrenoDeManoEje_6]);
+  mapSonometro(key, value, collectionOfMaps[intSonometro]);
+  mapInspeccionVisual(key, value, collectionOfMaps[intInspeccionVisual]);
+  mapInspeccionDH(key, value, collectionOfMaps[intInspeccionDH]);
+  mapFrenos(key, value, collectionOfMaps[intFrenos]);
+  mapValoresCalibrados(key, value, collectionOfMaps[intValoresCalibrados]);
+  mapLineaDePrueba(key, value, collectionOfMaps[intLineaDePrueba]);
+  mapEstadísticaDePuestos(key, value, collectionOfMaps[intEstadisticaDePuesto]);
 }
 
 /**
@@ -474,10 +467,13 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedSuspencionEjeDelantero the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapSuspencionEjeDelantero(key, value, mappedSuspencionEjeDelantero) {
+function mapSuspencionEjeDelantero(key, value, mappedSuspencionEjeDelantero) {
   for (var i = 0; i < suspencionEjeDelanteroKeys.length; i++) {
     if (key == suspencionEjeDelanteroKeys[i]) {
-      mappedSuspencionEjeDelantero.set(suspencionEjeDelanteroMap.get(key), mapSingleFile.get(key));
+      mappedSuspencionEjeDelantero.set(
+        suspencionEjeDelanteroMap.get(key),
+        mapSingleFile.get(key)
+      );
     }
   }
   return mappedSuspencionEjeDelantero;
@@ -492,7 +488,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapSuspencionEjeTrasero(key, value, mappedObj) {
+function mapSuspencionEjeTrasero(key, value, mappedObj) {
   for (var i = 0; i < suspencionEjeTraseroKeys.length; i++) {
     if (key == suspencionEjeTraseroKeys[i]) {
       mappedObj.set(suspencionEjeTraseroMap.get(key), mapSingleFile.get(key));
@@ -510,7 +506,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapOpacimetro(key, value, mappedObj) {
+function mapOpacimetro(key, value, mappedObj) {
   for (var i = 0; i < opacimetroKeys.length; i++) {
     if (key == opacimetroKeys[i]) {
       mappedObj.set(opacimetroMap.get(key), mapSingleFile.get(key));
@@ -528,7 +524,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapAnalizadorDeGases(key, value, mappedObj) {
+function mapAnalizadorDeGases(key, value, mappedObj) {
   for (var i = 0; i < analizadorDeGasesKeys.length; i++) {
     if (key == analizadorDeGasesKeys[i]) {
       mappedObj.set(analizadorDeGasesMap.get(key), mapSingleFile.get(key));
@@ -546,7 +542,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenosEje_1(key, value, mappedObj) {
+function mapFrenosEje_1(key, value, mappedObj) {
   for (var i = 0; i < frenosEje_1Keys.length; i++) {
     if (key == frenosEje_1Keys[i]) {
       mappedObj.set(frenosEje_1Map.get(key), mapSingleFile.get(key));
@@ -564,7 +560,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenosEje_2(key, value, mappedObj) {
+function mapFrenosEje_2(key, value, mappedObj) {
   for (var i = 0; i < frenosEje_2Keys.length; i++) {
     if (key == frenosEje_2Keys[i]) {
       mappedObj.set(frenosEje_2Map.get(key), mapSingleFile.get(key));
@@ -582,7 +578,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenosEje_3(key, value, mappedObj) {
+function mapFrenosEje_3(key, value, mappedObj) {
   for (var i = 0; i < frenosEje_3Keys.length; i++) {
     if (key == frenosEje_3Keys[i]) {
       mappedObj.set(frenosEje_3Map.get(key), mapSingleFile.get(key));
@@ -600,7 +596,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenosEje_4(key, value, mappedObj) {
+function mapFrenosEje_4(key, value, mappedObj) {
   for (var i = 0; i < frenosEje_4Keys.length; i++) {
     if (key == frenosEje_4Keys[i]) {
       mappedObj.set(frenosEje_4Map.get(key), mapSingleFile.get(key));
@@ -618,7 +614,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenosEje_5(key, value, mappedObj) {
+function mapFrenosEje_5(key, value, mappedObj) {
   for (var i = 0; i < frenosEje_5Keys.length; i++) {
     if (key == frenosEje_5Keys[i]) {
       mappedObj.set(frenosEje_5Map.get(key), mapSingleFile.get(key));
@@ -636,7 +632,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenosEje_6(key, value, mappedObj) {
+function mapFrenosEje_6(key, value, mappedObj) {
   for (var i = 0; i < frenosEje_6Keys.length; i++) {
     if (key == frenosEje_6Keys[i]) {
       mappedObj.set(frenosEje_6Map.get(key), mapSingleFile.get(key));
@@ -654,7 +650,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenoDeManoEje_1(key, value, mappedObj) {
+function mapFrenoDeManoEje_1(key, value, mappedObj) {
   for (var i = 0; i < frenoDeManoEje_1Keys.length; i++) {
     if (key == frenoDeManoEje_1Keys[i]) {
       mappedObj.set(frenoDeManoEje_1Map.get(key), mapSingleFile.get(key));
@@ -672,7 +668,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenoDeManoEje_2(key, value, mappedObj) {
+function mapFrenoDeManoEje_2(key, value, mappedObj) {
   for (var i = 0; i < frenoDeManoEje_2Keys.length; i++) {
     if (key == frenoDeManoEje_2Keys[i]) {
       mappedObj.set(frenoDeManoEje_2Map.get(key), mapSingleFile.get(key));
@@ -690,7 +686,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenoDeManoEje_3(key, value, mappedObj) {
+function mapFrenoDeManoEje_3(key, value, mappedObj) {
   for (var i = 0; i < frenoDeManoEje_3Keys.length; i++) {
     if (key == frenoDeManoEje_3Keys[i]) {
       mappedObj.set(frenoDeManoEje_3Map.get(key), mapSingleFile.get(key));
@@ -708,7 +704,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenoDeManoEje_4(key, value, mappedObj) {
+function mapFrenoDeManoEje_4(key, value, mappedObj) {
   for (var i = 0; i < frenoDeManoEje_4Keys.length; i++) {
     if (key == frenoDeManoEje_4Keys[i]) {
       mappedObj.set(frenoDeManoEje_4Map.get(key), mapSingleFile.get(key));
@@ -726,7 +722,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenoDeManoEje_5(key, value, mappedObj) {
+function mapFrenoDeManoEje_5(key, value, mappedObj) {
   for (var i = 0; i < frenoDeManoEje_5Keys.length; i++) {
     if (key == frenoDeManoEje_5Keys[i]) {
       mappedObj.set(frenoDeManoEje_5Map.get(key), mapSingleFile.get(key));
@@ -744,7 +740,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenoDeManoEje_6(key, value, mappedObj) {
+function mapFrenoDeManoEje_6(key, value, mappedObj) {
   for (var i = 0; i < frenoDeManoEje_6Keys.length; i++) {
     if (key == frenoDeManoEje_6Keys[i]) {
       mappedObj.set(frenoDeManoEje_6Map.get(key), mapSingleFile.get(key));
@@ -762,7 +758,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapSonometro(key, value, mappedObj) {
+function mapSonometro(key, value, mappedObj) {
   for (var i = 0; i < sonometroKeys.length; i++) {
     if (key == sonometroKeys[i]) {
       mappedObj.set(sonometroMap.get(key), mapSingleFile.get(key));
@@ -780,7 +776,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapLuxometro(key, value, mappedObj) {
+function mapLuxometro(key, value, mappedObj) {
   for (var i = 0; i < luxometroKeys.length; i++) {
     if (key == luxometroKeys[i]) {
       mappedObj.set(luxometroMap.get(key), mapSingleFile.get(key));
@@ -798,7 +794,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapInspeccionVisual(key, value, mappedObj) {
+function mapInspeccionVisual(key, value, mappedObj) {
   for (var i = 0; i < inspeccionVisualKeys.length; i++) {
     if (key == inspeccionVisualKeys[i]) {
       mappedObj.set(inspeccionVisualMap.get(key), mapSingleFile.get(key));
@@ -816,7 +812,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapInspeccionDH(key, value, mappedObj) {
+function mapInspeccionDH(key, value, mappedObj) {
   for (var i = 0; i < inspeccionDHKeys.length; i++) {
     if (key == inspeccionDHKeys[i]) {
       mappedObj.set(inspeccionDHMap.get(key), mapSingleFile.get(key));
@@ -834,7 +830,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapFrenos(key, value, mappedObj) {
+function mapFrenos(key, value, mappedObj) {
   for (var i = 0; i < frenosKeys.length; i++) {
     if (key == frenosKeys[i]) {
       mappedObj.set(frenosMap.get(key), mapSingleFile.get(key));
@@ -842,7 +838,6 @@ function mapAlineacion(key, value, mappedObj) {
   }
   return mappedObj;
 }
-
 
 /**
  * Function to be called in a for each loop of the global variable mapSingleFile
@@ -853,7 +848,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapValoresCalibrados(key, value, mappedObj) {
+function mapValoresCalibrados(key, value, mappedObj) {
   for (var i = 0; i < valoresCalibradosKeys.length; i++) {
     if (key == valoresCalibradosKeys[i]) {
       mappedObj.set(valoresCalibradosMap.get(key), mapSingleFile.get(key));
@@ -861,7 +856,6 @@ function mapAlineacion(key, value, mappedObj) {
   }
   return mappedObj;
 }
-
 
 /**
  * Function to be called in a for each loop of the global variable mapSingleFile
@@ -872,7 +866,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapLineaDePrueba(key, value, mappedObj) {
+function mapLineaDePrueba(key, value, mappedObj) {
   for (var i = 0; i < lineaDePruebaKeys.length; i++) {
     if (key == lineaDePruebaKeys[i]) {
       mappedObj.set(lineaDePruebaMap.get(key), mapSingleFile.get(key));
@@ -880,7 +874,6 @@ function mapAlineacion(key, value, mappedObj) {
   }
   return mappedObj;
 }
-
 
 /**
  * Function to be called in a for each loop of the global variable mapSingleFile
@@ -891,7 +884,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @param {*} mappedObj the placeholder for data to be mapped into from data in the mapSingleFile global variable
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
- function mapEstadísticaDePuestos(key, value, mappedObj) {
+function mapEstadísticaDePuestos(key, value, mappedObj) {
   for (var i = 0; i < estadisticaDePuestosKeys.length; i++) {
     if (key == estadisticaDePuestosKeys[i]) {
       mappedObj.set(estadisticaDePuestosMap.get(key), mapSingleFile.get(key));
@@ -907,17 +900,16 @@ function mapAlineacion(key, value, mappedObj) {
  * @returns Jsonified global variable structureMap.
  */
 function transformMapToJson() {
-
   /** Transform main Map into object */
   let obj = Object.fromEntries(structureMap);
 
   /** Transform submap into object and set it to obj */
-  for (let i = 0; i < collectionOfVariables.length ; i++) {
-    
-    let internalObj = Object.fromEntries(structureMap.get(collectionOfVariables[i]));
-    let varToSearch = collectionOfVariables[i] ;
+  for (let i = 0; i < collectionOfVariables.length; i++) {
+    let internalObj = Object.fromEntries(
+      structureMap.get(collectionOfVariables[i])
+    );
+    let varToSearch = collectionOfVariables[i];
     obj[varToSearch] = internalObj;
-
   }
 
   let jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs

@@ -25,7 +25,6 @@ import {
   VALORES_CALIBRADOS,
   LINEA_DE_PRUEBA,
   ESTADISTICA_DE_PUESTOS,
-  NO_VINCULADOS,
   intHeader,
   intAlineacion,
   intSuspencionEjeDelantero,
@@ -687,10 +686,6 @@ export const estadisticaDePuestosKeys = [
 ];
 
 /**
- * All keys from the noVinculados category in the excel file.
- */
-export const noVinculadosKeys = [];
-/**
  * All keys and values from the header category in the excel file.
  */
 export const headerMap = new Map([
@@ -1054,11 +1049,6 @@ export const estadisticaDePuestosMap = new Map([
 ]);
 
 /**
- * All keys and values from the noVinculados category in the excel file.
- */
-export const noVinculadosMap = new Map();
-
-/**
  *  Stores the map with the excel representation of data.
  *  To remain as a comparison structure when the txt file is read and proccessed.
  */
@@ -1089,7 +1079,6 @@ export const structureFinalMap = new Map([
   [VALORES_CALIBRADOS, valoresCalibradosMap],
   [LINEA_DE_PRUEBA, lineaDePruebaMap],
   [ESTADISTICA_DE_PUESTOS, estadisticaDePuestosMap],
-  [NO_VINCULADOS, noVinculadosMap],
 ]);
 
 /**
@@ -1122,5 +1111,4 @@ export const collectionOfVariables = [
   VALORES_CALIBRADOS,
   LINEA_DE_PRUEBA,
   ESTADISTICA_DE_PUESTOS,
-  NO_VINCULADOS,
 ];
