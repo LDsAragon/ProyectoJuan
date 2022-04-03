@@ -24,3 +24,6 @@ CASO 2 ============
    Ese es el modelo que se utiliza para mapear los datos cuando se sube un archivo
 
 ==========                    FIN       CASO 2                      ===================
+
+
+Proyecto buildeado en electron: https://drive.google.com/drive/folders/1JmK-GAduKKxOhkZOKAXeo-84UjrjAqtC?usp=sharing
