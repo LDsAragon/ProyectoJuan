@@ -247,7 +247,7 @@ function createMap(item, index, arr) {
 function cleanCategories(data) {
   let result = data != undefined ? data : "";
 
-  for (var i = 0; i < categories.length; i++) {
+  for (let i = 0; i < categories.length; i++) {
     let replaceCategories = categories[i] + "\r\n";
     result = result.replace(replaceCategories, "");
   }
@@ -271,7 +271,7 @@ function cleanElementsOfArray(data) {
 
   let result = data != undefined ? data : [];
 
-  for (var i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     result[i] = result[i].replaceAll(EMPTY_SPACE, "");
     result[i] = result[i].replaceAll(SEMICOLON, "");
     result[i] = result[i].replaceAll(NEW_LINE, "");
@@ -291,8 +291,8 @@ function cleanElementsOfArray(data) {
  * @returns  A new array with no empty spaces
  */
 function cleanArrayOfEmpty(dirtyOne) {
-  var newArray = new Array();
-  for (var i = 0; i < dirtyOne.length; i++) {
+  let newArray = new Array();
+  for (let i = 0; i < dirtyOne.length; i++) {
     if (dirtyOne[i]) {
       newArray.push(dirtyOne[i]);
     }
@@ -433,7 +433,7 @@ function generateAllStructuresOnMap(value, key, map, collectionOfMaps) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapHeader(key, value, mappedObj) {
-  for (var i = 0; i < headerKeys.length; i++) {
+  for (let i = 0; i < headerKeys.length; i++) {
     if (key == headerKeys[i]) {
       mappedObj.set(headerMap.get(key), mapSingleFile.get(key));
     }
@@ -450,7 +450,7 @@ function mapHeader(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapAlineacion(key, value, mappedObj) {
-  for (var i = 0; i < alineacionKeys.length; i++) {
+  for (let i = 0; i < alineacionKeys.length; i++) {
     if (key == alineacionKeys[i]) {
       mappedObj.set(alineacionMap.get(key), mapSingleFile.get(key));
     }
@@ -468,7 +468,7 @@ function mapAlineacion(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapSuspencionEjeDelantero(key, value, mappedSuspencionEjeDelantero) {
-  for (var i = 0; i < suspencionEjeDelanteroKeys.length; i++) {
+  for (let i = 0; i < suspencionEjeDelanteroKeys.length; i++) {
     if (key == suspencionEjeDelanteroKeys[i]) {
       mappedSuspencionEjeDelantero.set(
         suspencionEjeDelanteroMap.get(key),
@@ -489,7 +489,7 @@ function mapSuspencionEjeDelantero(key, value, mappedSuspencionEjeDelantero) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapSuspencionEjeTrasero(key, value, mappedObj) {
-  for (var i = 0; i < suspencionEjeTraseroKeys.length; i++) {
+  for (let i = 0; i < suspencionEjeTraseroKeys.length; i++) {
     if (key == suspencionEjeTraseroKeys[i]) {
       mappedObj.set(suspencionEjeTraseroMap.get(key), mapSingleFile.get(key));
     }
@@ -507,7 +507,7 @@ function mapSuspencionEjeTrasero(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapOpacimetro(key, value, mappedObj) {
-  for (var i = 0; i < opacimetroKeys.length; i++) {
+  for (let i = 0; i < opacimetroKeys.length; i++) {
     if (key == opacimetroKeys[i]) {
       mappedObj.set(opacimetroMap.get(key), mapSingleFile.get(key));
     }
@@ -525,7 +525,7 @@ function mapOpacimetro(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapAnalizadorDeGases(key, value, mappedObj) {
-  for (var i = 0; i < analizadorDeGasesKeys.length; i++) {
+  for (let i = 0; i < analizadorDeGasesKeys.length; i++) {
     if (key == analizadorDeGasesKeys[i]) {
       mappedObj.set(analizadorDeGasesMap.get(key), mapSingleFile.get(key));
     }
@@ -543,7 +543,7 @@ function mapAnalizadorDeGases(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenosEje_1(key, value, mappedObj) {
-  for (var i = 0; i < frenosEje_1Keys.length; i++) {
+  for (let i = 0; i < frenosEje_1Keys.length; i++) {
     if (key == frenosEje_1Keys[i]) {
       mappedObj.set(frenosEje_1Map.get(key), mapSingleFile.get(key));
     }
@@ -561,7 +561,7 @@ function mapFrenosEje_1(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenosEje_2(key, value, mappedObj) {
-  for (var i = 0; i < frenosEje_2Keys.length; i++) {
+  for (let i = 0; i < frenosEje_2Keys.length; i++) {
     if (key == frenosEje_2Keys[i]) {
       mappedObj.set(frenosEje_2Map.get(key), mapSingleFile.get(key));
     }
@@ -579,7 +579,7 @@ function mapFrenosEje_2(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenosEje_3(key, value, mappedObj) {
-  for (var i = 0; i < frenosEje_3Keys.length; i++) {
+  for (let i = 0; i < frenosEje_3Keys.length; i++) {
     if (key == frenosEje_3Keys[i]) {
       mappedObj.set(frenosEje_3Map.get(key), mapSingleFile.get(key));
     }
@@ -597,7 +597,7 @@ function mapFrenosEje_3(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenosEje_4(key, value, mappedObj) {
-  for (var i = 0; i < frenosEje_4Keys.length; i++) {
+  for (let i = 0; i < frenosEje_4Keys.length; i++) {
     if (key == frenosEje_4Keys[i]) {
       mappedObj.set(frenosEje_4Map.get(key), mapSingleFile.get(key));
     }
@@ -615,7 +615,7 @@ function mapFrenosEje_4(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenosEje_5(key, value, mappedObj) {
-  for (var i = 0; i < frenosEje_5Keys.length; i++) {
+  for (let i = 0; i < frenosEje_5Keys.length; i++) {
     if (key == frenosEje_5Keys[i]) {
       mappedObj.set(frenosEje_5Map.get(key), mapSingleFile.get(key));
     }
@@ -633,7 +633,7 @@ function mapFrenosEje_5(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenosEje_6(key, value, mappedObj) {
-  for (var i = 0; i < frenosEje_6Keys.length; i++) {
+  for (let i = 0; i < frenosEje_6Keys.length; i++) {
     if (key == frenosEje_6Keys[i]) {
       mappedObj.set(frenosEje_6Map.get(key), mapSingleFile.get(key));
     }
@@ -651,7 +651,7 @@ function mapFrenosEje_6(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenoDeManoEje_1(key, value, mappedObj) {
-  for (var i = 0; i < frenoDeManoEje_1Keys.length; i++) {
+  for (let i = 0; i < frenoDeManoEje_1Keys.length; i++) {
     if (key == frenoDeManoEje_1Keys[i]) {
       mappedObj.set(frenoDeManoEje_1Map.get(key), mapSingleFile.get(key));
     }
@@ -669,7 +669,7 @@ function mapFrenoDeManoEje_1(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenoDeManoEje_2(key, value, mappedObj) {
-  for (var i = 0; i < frenoDeManoEje_2Keys.length; i++) {
+  for (let i = 0; i < frenoDeManoEje_2Keys.length; i++) {
     if (key == frenoDeManoEje_2Keys[i]) {
       mappedObj.set(frenoDeManoEje_2Map.get(key), mapSingleFile.get(key));
     }
@@ -687,7 +687,7 @@ function mapFrenoDeManoEje_2(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenoDeManoEje_3(key, value, mappedObj) {
-  for (var i = 0; i < frenoDeManoEje_3Keys.length; i++) {
+  for (let i = 0; i < frenoDeManoEje_3Keys.length; i++) {
     if (key == frenoDeManoEje_3Keys[i]) {
       mappedObj.set(frenoDeManoEje_3Map.get(key), mapSingleFile.get(key));
     }
@@ -705,7 +705,7 @@ function mapFrenoDeManoEje_3(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenoDeManoEje_4(key, value, mappedObj) {
-  for (var i = 0; i < frenoDeManoEje_4Keys.length; i++) {
+  for (let i = 0; i < frenoDeManoEje_4Keys.length; i++) {
     if (key == frenoDeManoEje_4Keys[i]) {
       mappedObj.set(frenoDeManoEje_4Map.get(key), mapSingleFile.get(key));
     }
@@ -723,7 +723,7 @@ function mapFrenoDeManoEje_4(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenoDeManoEje_5(key, value, mappedObj) {
-  for (var i = 0; i < frenoDeManoEje_5Keys.length; i++) {
+  for (let i = 0; i < frenoDeManoEje_5Keys.length; i++) {
     if (key == frenoDeManoEje_5Keys[i]) {
       mappedObj.set(frenoDeManoEje_5Map.get(key), mapSingleFile.get(key));
     }
@@ -741,7 +741,7 @@ function mapFrenoDeManoEje_5(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenoDeManoEje_6(key, value, mappedObj) {
-  for (var i = 0; i < frenoDeManoEje_6Keys.length; i++) {
+  for (let i = 0; i < frenoDeManoEje_6Keys.length; i++) {
     if (key == frenoDeManoEje_6Keys[i]) {
       mappedObj.set(frenoDeManoEje_6Map.get(key), mapSingleFile.get(key));
     }
@@ -759,7 +759,7 @@ function mapFrenoDeManoEje_6(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapSonometro(key, value, mappedObj) {
-  for (var i = 0; i < sonometroKeys.length; i++) {
+  for (let i = 0; i < sonometroKeys.length; i++) {
     if (key == sonometroKeys[i]) {
       mappedObj.set(sonometroMap.get(key), mapSingleFile.get(key));
     }
@@ -777,7 +777,7 @@ function mapSonometro(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapLuxometro(key, value, mappedObj) {
-  for (var i = 0; i < luxometroKeys.length; i++) {
+  for (let i = 0; i < luxometroKeys.length; i++) {
     if (key == luxometroKeys[i]) {
       mappedObj.set(luxometroMap.get(key), mapSingleFile.get(key));
     }
@@ -795,7 +795,7 @@ function mapLuxometro(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapInspeccionVisual(key, value, mappedObj) {
-  for (var i = 0; i < inspeccionVisualKeys.length; i++) {
+  for (let i = 0; i < inspeccionVisualKeys.length; i++) {
     if (key == inspeccionVisualKeys[i]) {
       mappedObj.set(inspeccionVisualMap.get(key), mapSingleFile.get(key));
     }
@@ -813,7 +813,7 @@ function mapInspeccionVisual(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapInspeccionDH(key, value, mappedObj) {
-  for (var i = 0; i < inspeccionDHKeys.length; i++) {
+  for (let i = 0; i < inspeccionDHKeys.length; i++) {
     if (key == inspeccionDHKeys[i]) {
       mappedObj.set(inspeccionDHMap.get(key), mapSingleFile.get(key));
     }
@@ -831,7 +831,7 @@ function mapInspeccionDH(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapFrenos(key, value, mappedObj) {
-  for (var i = 0; i < frenosKeys.length; i++) {
+  for (let i = 0; i < frenosKeys.length; i++) {
     if (key == frenosKeys[i]) {
       mappedObj.set(frenosMap.get(key), mapSingleFile.get(key));
     }
@@ -849,7 +849,7 @@ function mapFrenos(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapValoresCalibrados(key, value, mappedObj) {
-  for (var i = 0; i < valoresCalibradosKeys.length; i++) {
+  for (let i = 0; i < valoresCalibradosKeys.length; i++) {
     if (key == valoresCalibradosKeys[i]) {
       mappedObj.set(valoresCalibradosMap.get(key), mapSingleFile.get(key));
     }
@@ -867,7 +867,7 @@ function mapValoresCalibrados(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapLineaDePrueba(key, value, mappedObj) {
-  for (var i = 0; i < lineaDePruebaKeys.length; i++) {
+  for (let i = 0; i < lineaDePruebaKeys.length; i++) {
     if (key == lineaDePruebaKeys[i]) {
       mappedObj.set(lineaDePruebaMap.get(key), mapSingleFile.get(key));
     }
@@ -885,7 +885,7 @@ function mapLineaDePrueba(key, value, mappedObj) {
  * @returns the new constructed map with data from the mapSingleFile global variable
  */
 function mapEstadísticaDePuestos(key, value, mappedObj) {
-  for (var i = 0; i < estadisticaDePuestosKeys.length; i++) {
+  for (let i = 0; i < estadisticaDePuestosKeys.length; i++) {
     if (key == estadisticaDePuestosKeys[i]) {
       mappedObj.set(estadisticaDePuestosMap.get(key), mapSingleFile.get(key));
     }
