@@ -1,23 +1,23 @@
 document.querySelector("#file-input").addEventListener("change", function () {
   // files that user has chosen
-  var all_files = this.files;
+  let all_files = this.files;
   if (all_files.length == 0) {
     alert("Error : No file selected");
     return;
   }
 
   // first file selected by user
-  var file = all_files[0];
+  let file = all_files[0];
 
   // files types allowed
-  var allowed_types = ["text/plain"];
+  let allowed_types = ["text/plain"];
   if (allowed_types.indexOf(file.type) == -1) {
     alert("Error : Incorrect file type");
     return;
   }
 
   // Max 2 MB allowed
-  var max_size_allowed = 2 * 1024 * 1024;
+  let max_size_allowed = 2 * 1024 * 1024;
   if (file.size > max_size_allowed) {
     alert("Error : Exceeded size 2MB");
     return;
@@ -26,7 +26,7 @@ document.querySelector("#file-input").addEventListener("change", function () {
   // file validation is successfull
   // we will now read the file
 
-  var reader = new FileReader();
+  let reader = new FileReader();
 
   // file reading started
   reader.addEventListener("loadstart", function () {
@@ -35,7 +35,7 @@ document.querySelector("#file-input").addEventListener("change", function () {
 
   // file reading finished successfully
   reader.addEventListener("load", function (e) {
-    var text = e.target.result;
+    let text = e.target.result;
 
     // contents of the file
     document.querySelector("#contents").innerHTML = text;
