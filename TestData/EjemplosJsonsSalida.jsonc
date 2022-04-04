@@ -1,0 +1,136 @@
+{
+	"header": {
+		"ID PRUEBA (Referencia Tramite)": "0",
+		"Patente": "MSN139_LINEA",
+		"Marca del Vehículo": "TOYOTA",
+		"Modelo": "HILUX4X2CABINADOBLEDXPACK2.5TDI",
+		"Año de Fabricación": "2013",
+		"Kilómetros": "144000",
+		"Combustible": "",
+		"Cantidad de Ejes": "",
+		"Numero de Chasis": "8AJER32G3C4043833",
+		"Tipo Vehiculo": "",
+		"Apellido": "CHULVECARMONA",
+		"Nombre": "FRANCISCO",
+		"Documento de Identidad": "92082795"
+	},
+	"alineacion": {
+		"Resultado Alineación Eje 1": "0,87568",
+		"Resultado Alineación Eje 2": "-0,20208"
+	},
+	"suspensionEjeDelantero": {
+		"Rendimiento Delantero Derecho": "88,1458147277423",
+		"Amplitud Máxima Lado Derecho": "16,1848958333333",
+		"Peso Lado Derecho": "327,326388888888",
+		"Rendimiento Delantero Izquierdo": "89,6926693971296",
+		"Amplitud Máximo Lado Izquierdo": "14,638041163946",
+		"Peso Lado Izquierdo": "339,602555003549",
+		"Diferencia Rendimiento Lado a Lado": "2"
+	},
+	"suspensionEjeTrasero": {
+		"Rendimiento Delantero Derecho": "71,9879762292012",
+		"Amplitud Máxima Lado Derecho": "32,5130208333333",
+		"Peso Lado Derecho": "338,402777777777",
+		"Rendimiento Delantero Izquierdo": "85,1299892555793",
+		"Amplitud Máximo Lado Izquierdo": "19,3710078069552",
+		"Peso Lado Izquierdo": "311,497515968772",
+		"Diferencia Rendimiento Lado a Lado": "15"
+	},
+	"opacimetro": {
+		"Resultado Medición Opacidad": "0,0887219515065217"
+	},
+	"analizadorDeGases": {
+		"Resultado Monoxido de Carbono CO": "0",
+		"Resultado Dioxido de Carbono CO1": "0",
+		"Resultado Partes por Millón HC": "0",
+		"Resultado Partes por Millón Nox": "0",
+		"Resultado Sensor de Oxigeno O2": "0"
+	},
+	"frenosEje_1": {
+		"Rendimiento del Eje": "66,2984010550791",
+		"Fuerza de Frenado Lado Derecho": "2,48319",
+		"Fuerza de Frenado Lado izquierdo": "1,85295",
+		"Ovalidad Lado Derecho": "0,11361",
+		"Ovalidad Lado Izquierdo": "0,0673800000000001",
+		"Resistencia Lado Derecho": "0,1648968",
+		"Resistencia Lado Izquierdo": "0,1711452",
+		"Peso Lado Izquierdo": "339,602555003549",
+		"Peso Lado Derecho": "327,326388888888",
+		"Diferencia Fza. Frenado Lado a Lado": "25"
+	},
+	"frenosEje_2": {
+		"Rendimiento del Eje": "62,2891285858639",
+		"Fuerza de Frenado Lado Derecho": "2,14236",
+		"Fuerza de Frenado Lado izquierdo": "1,93156",
+		"Ovalidad Lado Derecho": "0,30837",
+		"Ovalidad Lado Izquierdo": "0,20214",
+		"Resistencia Lado Derecho": "0,0759564",
+		"Resistencia a la Rodadura Lado Izquierdo": "0,1298188",
+		"Peso Lado Izquierdo": "311,497515968772",
+		"Peso Lado Derecho": "338,402777777777",
+		"Diferencia Fza. Frenado Lado a Lado": "10"
+	},
+	"frenosEje_3": {},
+	"frenosEje_4": {},
+	"frenosEje_5": {},
+	"frenosEje_6": {},
+	"frenoDeManoEje_1": {
+		"Rendimiento del Eje": "0",
+		"Fuerza de Frenado Lado Derecho": "0",
+		"Fuerza de Frenado Lado izquierdo": "0",
+		"Ovalidad Lado Derecho": "0",
+		"Ovalidad Lado Izquierdo": "0",
+		"Resistencia Lado Derecho": "0",
+		"Resistencia Lado Izquierdo": "0",
+		"Diferencia Fza. Frenado Lado a Lado": "0"
+	},
+	"frenoDeManoEje_2": {
+		"Rendimiento del Eje": "62,0409763008537",
+		"Fuerza de Frenado Lado Derecho": "2,12613",
+		"Fuerza de Frenado Lado izquierdo": "1,93156",
+		"Ovalidad Lado Derecho": "0,21099",
+		"Ovalidad Lado Izquierdo": "0,23583",
+		"Resistencia Lado Derecho": "0,9536748",
+		"Resistencia Lado Izquierdo": "0,8584212",
+		"Diferencia Fza. Frenado Lado a Lado": "9"
+	},
+	"frenoDeManoEje_3": {},
+	"frenoDeManoEje_4": {},
+	"frenoDeManoEje_5": {},
+	"frenoDeManoEje_6": {},
+	"sonometro": {
+		"Valor de Medición": "65"
+	},
+	"luxometro": {},
+	"inspeccionVisual": {},
+	"inspeccionDH": {},
+	"frenos": {
+		"Motivo de Corte de Prueba de Freno Eje 1": "RES",
+		"Motivo de Corte de Prueba de Freno Eje 2": "TMP",
+		"Motivo de Corte de Prueba de F. Mano Eje 1": "OTR",
+		"Motivo de Corte de Prueba de F. Mano Eje 2": "RES"
+	},
+	"valoresCalibrados": {
+		"Valor de Cero de BF Derecho": "1931",
+		"Valor de Cero de BF Izquierdo": "1900",
+		"Valor de Cero Balanza Derecha": "2037",
+		"Valor de Cero de Balanza Izquierda": "2036",
+		"Valor de Ganancia de BF Derecho": "0,01623",
+		"Valor de Ganancia BF Izquierdo": "0,01123",
+		"Valor de Ganancia de Balanza Derecha": "0,1",
+		"Valor de Ganancia de Balanza Izquierda": "0,1"
+	},
+	"lineaDePrueba": {
+		"Número de Línea": "1"
+	},
+	"estadísticaDePuestos": {
+		"Fecha ingreso al Puesto 1": "25/2/202109:32:49",
+		"Fecha de salida del Puesto 1": "25/2/202109:35:34",
+		"Operador Puesto 1": "Operador",
+		"Nro de Línea Pto1": "1",
+		"Fecha ingreso al Puesto 2": "25/2/202109:36:46",
+		"Fecha de salida del Puesto 2": "25/2/202109:43:33",
+		"Operador Puesto 2": "Operador",
+		"Nro de Línea Pto2": "1"
+	}
+}
