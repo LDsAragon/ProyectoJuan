@@ -166,22 +166,33 @@ document.getElementById("file-input").addEventListener(
 
 /**
  * Button to parse data from file into json and print in text
- * As it can be called async the if validates that significative data is worth showing.
  */
 document.getElementById("singleFileButton").addEventListener(
   "click",
   function (ev) {
     let fileData = returnSetOfDataSF();
     let transformedMap = populateStructure();
-    let text = transformMapToJson();
-
+    let text = transformMapToJson(true);
+  
     if (transformedMap !== structureFinalMap) {
       document.querySelector("#jsonContainer").innerHTML = text;
       document.querySelector("#jsonContainer").style.display = "block";
-    }
+    }  
   },
   false
 );
+
+/**
+ * Calls the funcitions that will process any files stored in singleFileData
+ * @returns retrieves the json object
+ */
+export function proccesFileGetJson() {
+  let fileData = returnSetOfDataSF();
+  let transformedMap = populateStructure();
+  let text = transformMapToJson();
+
+  return text;
+}
 
 /**
  * Simple JavaScript Promise that reads a file as text.
@@ -899,7 +910,9 @@ function mapEstadísticaDePuestos(key, value, mappedObj) {
  *
  * @returns Jsonified global variable structureMap.
  */
-function transformMapToJson() {
+function transformMapToJson(Stringify) {
+  let jsonString ;
+
   /** Transform main Map into object */
   let obj = Object.fromEntries(structureMap);
 
@@ -912,8 +925,12 @@ function transformMapToJson() {
     obj[varToSearch] = internalObj;
   }
 
-  let jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs
-  //let jsonString = JSON.stringify(obj); // just the minimized json
+  jsonString = JSON.stringify(obj); // just the minimized json
+  if(Stringify){
+    jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs  
+  }
+  
+  
 
   return jsonString;
 }
