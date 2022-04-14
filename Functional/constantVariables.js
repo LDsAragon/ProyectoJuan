@@ -234,525 +234,526 @@ export const intLineaDePrueba = 24;
 export const intEstadisticaDePuesto = 25;
 
 /**
- * Normalization of name patente for the key N10100 in the final JSON structure.
+ * Normalization of name patente for the key in the final JSON structure.
  */
 export const patente = "patente";
 /**
- * Normalization of name numeroDeChasis for the key N10102 in the final JSON structure.
+ * Normalization of name numeroDeChasis for the key in the final JSON structure.
  */
 export const numeroDeChasis = "numeroDeChasis";
 /**
- * Normalization of name numeroMotor for the key N10104 in the final JSON structure.
+ * Normalization of name numeroMotor for the key in the final JSON structure.
  */
 export const numeroMotor = "numeroMotor";
 /**
- * Normalization of name marcaDelVehículo for the key N10200 in the final JSON structure.
+ * Normalization of name marcaDelVehículo for the key in the final JSON structure.
  */
 export const marcaDelVehiculo = "marcaDelVehiculo";
 /**
- * Normalization of name añoDeFabricación for the key N10201 in the final JSON structure.
+ * Normalization of name añoDeFabricación for the key in the final JSON structure.
  */
 export const añoDeFabricacion = "añoDeFabricacion";
 /**
- * Normalization of name subModelo for the key N10202 in the final JSON structure.
+ * Normalization of name subModelo for the key in the final JSON structure.
  */
 export const subModelo = "subModelo";
 /**
- * Normalization of name modelo for the key N10203 in the final JSON structure.
+ * Normalization of name modelo for the key in the final JSON structure.
  */
 export const modelo = "modelo";
 /**
- * Normalization of name kilómetros for the key N10204 in the final JSON structure.
+ * Normalization of name kilómetros for the key in the final JSON structure.
  */
 export const kilometros = "kilometros";
 /**
- * Normalization of name tipoVehiculo for the key N10208 in the final JSON structure.
+ * Normalization of name tipoVehiculo for the key in the final JSON structure.
  */
 export const tipoVehiculo = "tipoVehiculo";
 /**
- * Normalization of name combustible for the key N10209 in the final JSON structure.
+ * Normalization of name combustible for the key in the final JSON structure.
  */
 export const combustible = "combustible";
 /**
- * Normalization of name cantidadDeEjes for the key N10210 in the final JSON structure.
+ * Normalization of name cantidadDeEjes for the key in the final JSON structure.
  */
 export const cantidadDeEjes = "cantidadDeEjes";
 /**
- * Normalization of name apellido for the key N10300 in the final JSON structure.
+ * Normalization of name apellido for the key in the final JSON structure.
  */
 export const apellido = "apellido";
 /**
- * Normalization of name nombre for the key N10301 in the final JSON structure.
+ * Normalization of name nombre for the key in the final JSON structure.
  */
 export const nombre = "nombre";
 /**
- * Normalization of name dirección for the key N10302 in the final JSON structure.
+ * Normalization of name dirección for the key in the final JSON structure.
  */
 export const direccion = "direccion";
 /**
- * Normalization of name documentoDeIdentidad for the key N10303 in the final JSON structure.
+ * Normalization of name documentoDeIdentidad for the key in the final JSON structure.
  */
 export const documentoDeIdentidad = "documentoDeIdentidad";
 /**
- * Normalization of name email for the key N10304 in the final JSON structure.
+ * Normalization of name email for the key in the final JSON structure.
  */
 export const email = "email";
 /**
- * Normalization of name teléfono for the key N10305 in the final JSON structure.
+ * Normalization of name teléfono for the key in the final JSON structure.
  */
 export const teléfono = "teléfono";
 /**
- * Normalization of name localidad for the key N10306 in the final JSON structure.
+ * Normalization of name localidad for the key in the final JSON structure.
  */
 export const localidad = "localidad";
 /**
- * Normalization of name provincia for the key N10307 in the final JSON structure.
+ * Normalization of name provincia for the key in the final JSON structure.
  */
 export const provincia = "provincia";
 /**
- * Normalization of name for the Referencia final JSON structure.
+ * Normalization of name idPrueba for the key in the final JSON structure.
  */
-export const idPrueba = "idPruebaRefTramite"; // ID PRUEBA (Referencia Tramite)
+ export const idPruebaRefTramite = "idPruebaRefTramite"; // ID PRUEBA (Referencia Tramite)
+  
 /**
- * Normalization of name (AAAAMMDDhhmmss for the key N16000 in the final JSON structure.
+ * Normalization of name (AAAAMMDDhhmmss for the key in the final JSON structure.
  */
 export const fechaHora = "fechaHora"; // (AAAAMMDDhhmmss)
 /**
- * Normalization of name pruebaDeAlineacion for the key N15000 in the final JSON structure.
+ * Normalization of name pruebaDeAlineacion for the key in the final JSON structure.
  */
 export const pruebaDeAlineacion = "pruebaDeAlineacion";
 /**
- * Normalization of name pruebaDeSuspension for the key N15001 in the final JSON structure.
+ * Normalization of name pruebaDeSuspension for the key in the final JSON structure.
  */
 export const pruebaDeSuspension = "pruebaDeSuspension";
 /**
- * Normalization of name pruebaDeFrenos for the key N15002 in the final JSON structure.
+ * Normalization of name pruebaDeFrenos for the key in the final JSON structure.
  */
 export const pruebaDeFrenos = "pruebaDeFrenos";
 /**
- * Normalization of name pruebaDeFrenosDeMano for the key N15003 in the final JSON structure.
+ * Normalization of name pruebaDeFrenosDeMano for the key in the final JSON structure.
  */
 export const pruebaDeFrenosDeMano = "pruebaDeFrenosDeMano";
 /**
- * Normalization of name pruebaDeLuces for the key N15004 in the final JSON structure.
+ * Normalization of name pruebaDeLuces for the key in the final JSON structure.
  */
 export const pruebaDeLuces = "pruebaDeLuces";
 /**
- * Normalization of name pruebaDeGases for the key N15005 in the final JSON structure.
+ * Normalization of name pruebaDeGases for the key in the final JSON structure.
  */
 export const pruebaDeGases = "pruebaDeGases";
 /**
- * Normalization of name pruebaDeInspVisual for the key N15006 in the final JSON structure.
+ * Normalization of name pruebaDeInspVisual for the key in the final JSON structure.
  */
 export const pruebaDeInspVisual = "pruebaDeInspVisual";
 /**
- * Normalization of name pruebaDeInspFosa for the key N15007 in the final JSON structure.
+ * Normalization of name pruebaDeInspFosa for the key in the final JSON structure.
  */
 export const pruebaDeInspFosa = "pruebaDeInspFosa";
 /**
- * Normalization of name pruebaSonometro for the key N15008 in the final JSON structure.
+ * Normalization of name pruebaSonometro for the key in the final JSON structure.
  */
 export const pruebaSonometro = "pruebaSonometro";
 /**
- * Normalization of name resultadoAlineacionEje1 for the key 30100  in the final JSON structure.
+ * Normalization of name resultadoAlineacionEje1 for the key in the final JSON structure.
  */
 export const resultadoAlineacionEje1 = "resultadoAlineacionEje1";
 /**
- * Normalization of name resultadoAlineacionEje2 for the key 30101  in the final JSON structure.
+ * Normalization of name resultadoAlineacionEje2 for the key in the final JSON structure.
  */
 export const resultadoAlineacionEje2 = "resultadoAlineacionEje2";
 /**
- * Normalization of name resultadoAlineacionEje3 for the key 30102  in the final JSON structure.
+ * Normalization of name resultadoAlineacionEje3 for the key in the final JSON structure.
  */
 export const resultadoAlineacionEje3 = "resultadoAlineacionEje3";
 /**
- * Normalization of name resultadoAlineacionEje4 for the key 30103  in the final JSON structure.
+ * Normalization of name resultadoAlineacionEje4 for the key in the final JSON structure.
  */
 export const resultadoAlineacionEje4 = "resultadoAlineacionEje4";
 /**
- * Normalization of name resultadoAlineacionEje5 for the key 30104  in the final JSON structure.
+ * Normalization of name resultadoAlineacionEje5 for the key in the final JSON structure.
  */
 export const resultadoAlineacionEje5 = "resultadoAlineacionEje5";
 /**
- * Normalization of name resultadoAlineacionEje6 for the key 30105  in the final JSON structure.
+ * Normalization of name resultadoAlineacionEje6 for the key in the final JSON structure.
  */
 export const resultadoAlineacionEje6 = "resultadoAlineacionEje6";
 /**
- * Normalization of name rendimientoDelanteroDerecho for the key  in the final JSON structure.
+ * Normalization of name rendimientoDelanteroDerecho for the key in the final JSON structure.
  */
 export const rendimientoDelanteroDerecho = "rendimientoDelanteroDerecho";
 /**
- * Normalization of name rendimientoDelanteroIzquierdo for the key  in the final JSON structure.
+ * Normalization of name rendimientoDelanteroIzquierdo for the key in the final JSON structure.
  */
 export const rendimientoDelanteroIzquierdo = "rendimientoDelanteroIzquierdo";
 /**
- * Normalization of name amplitudMaximaLadoDerecho for the key  in the final JSON structure.
+ * Normalization of name amplitudMaximaLadoDerecho for the key in the final JSON structure.
  */
 export const amplitudMaximaLadoDerecho = "amplitudMaximaLadoDerecho";
 /**
- * Normalization of name amplitudMáximoLadoIzquierdo for the key  in the final JSON structure.
+ * Normalization of name amplitudMáximoLadoIzquierdo for the key in the final JSON structure.
  */
 export const amplitudMaximaLadoIzquierdo = "amplitudMaximaLadoIzquierdo";
 /**
- * Normalization of name pesoLadoDerecho for the key  in the final JSON structure.
+ * Normalization of name pesoLadoDerecho for the key in the final JSON structure.
  */
 export const pesoLadoDerecho = "pesoLadoDerecho";
 /**
- * Normalization of name pesoLadoIzquierdo for the key  in the final JSON structure.
+ * Normalization of name pesoLadoIzquierdo for the key in the final JSON structure.
  */
 export const pesoLadoIzquierdo = "pesoLadoIzquierdo";
 /**
- * Normalization of name diferenciaRendimientoLadoALado for the key  in the final JSON structure.
+ * Normalization of name diferenciaRendimientoLadoALado for the key in the final JSON structure.
  */
 export const diferenciaRendimientoLadoALado = "diferenciaRendimientoLadoALado";
 
 /**
- * Normalization of name resultadoMediciónOpacidad for the printkey  in the final JSON structure.
+ * Normalization of name resultadoMediciónOpacidad for the key in the final JSON structure.
  */
 export const resultadoMedicionOpacidad = "resultadoMedicionOpacidad";
 
 /**
- * Normalization of name ResultadoMonoxidoDeCarbonoCO for the key N31110 in the final JSON structure.
+ * Normalization of name ResultadoMonoxidoDeCarbonoCO for the key in the final JSON structure.
  */
 export const resultadoMonoxidoDeCarbonoCO = "resultadoMonoxidoDeCarbonoCO";
 /**
- * Normalization of name ResultadoPartesPorMillónHC for the key N31111 in the final JSON structure.
+ * Normalization of name ResultadoPartesPorMillónHC for the key in the final JSON structure.
  */
 export const resultadoPartesPorMillonHC = "resultadoPartesPorMillonHC";
 /**
- * Normalization of name ResultadoSensorDeOxigenoO2 for the key N31120 in the final JSON structure.
+ * Normalization of name ResultadoSensorDeOxigenoO2 for the key in the final JSON structure.
  */
 export const resultadoSensorDeOxigenoO2 = "resultadoSensorDeOxigenoO2";
 /**
- * Normalization of name ResultadoPartesPorMillónNox for the key N31121 in the final JSON structure.
+ * Normalization of name ResultadoPartesPorMillónNox for the key in the final JSON structure.
  */
 export const resultadoPartesPorMillonNox = "resultadoPartesPorMillonNox";
 /**
- * Normalization of name ResultadoDioxidoDeCarbonoCO1 for the key N31122 in the final JSON structure.
+ * Normalization of name ResultadoDioxidoDeCarbonoCO1 for the key in the final JSON structure.
  */
 export const resultadoDioxidoDeCarbonoCO1 = "resultadoDioxidoDeCarbonoCO1";
 /**
- * Normalization of name Lambda for the key N38500 in the final JSON structure.
+ * Normalization of name Lambda for the key in the final JSON structure.
  */
 export const lambda = "lambda";
 /**
- * Normalization of name fuerzaDeFrenadoLadoDerecho for the key 39000  in the final JSON structure.
+ * Normalization of name fuerzaDeFrenadoLadoDerecho for the key in the final JSON structure.
  */
 export const fuerzaDeFrenadoLadoDerecho = "fuerzaDeFrenadoLadoDerecho";
 /**
- * Normalization of name fuerzaDeFrenadoLadoIzquierdo for the key 39001  in the final JSON structure.
+ * Normalization of name fuerzaDeFrenadoLadoIzquierdo for the key in the final JSON structure.
  */
 export const fuerzaDeFrenadoLadoIzquierdo = "fuerzaDeFrenadoLadoIzquierdo";
 /**
- * Normalization of name diferenciaFzaFrenadoLadoALado for the key 39002  in the final JSON structure.
+ * Normalization of name diferenciaFzaFrenadoLadoALado for the key in the final JSON structure.
  */
 export const diferenciaFzaFrenadoLadoALado = "diferenciaFzaFrenadoLadoALado";
 /**
- * Normalization of name rendimientoDelEje for the key 39003  in the final JSON structure.
+ * Normalization of name rendimientoDelEje for the key in the final JSON structure.
  */
 export const rendimientoDelEje = "rendimientoDelEje";
 /**
- * Normalization of name ovalidadLadoDerecho for the key 39004  in the final JSON structure.
+ * Normalization of name ovalidadLadoDerecho for the key in the final JSON structure.
  */
 export const ovalidadLadoDerecho = "ovalidadLadoDerecho";
 /**
- * Normalization of name ovalidadLadoIzquierdo for the key 39005  in the final JSON structure.
+ * Normalization of name ovalidadLadoIzquierdo for the key in the final JSON structure.
  */
 export const ovalidadLadoIzquierdo = "ovalidadLadoIzquierdo";
 /**
- * Normalization of name resistenciaALaRodaduraLadoDerecho for the key 50000  in the final JSON structure.
+ * Normalization of name resistenciaALaRodaduraLadoDerecho for the key in the final JSON structure.
  */
 export const resistenciaALaRodaduraLadoDerecho =  "resistenciaALaRodaduraLadoDerecho";
 /**
- * Normalization of name resistenciaALaRodaduraLadoIzquierdo for the key  in the final inJSON structure.
+ * Normalization of name resistenciaALaRodaduraLadoIzquierdo for the key in the final JSON structure.
  */
 export const resistenciaALaRodaduraLadoIzquierdo =  "resistenciaALaRodaduraLadoIzquierdo";
 /**
- * Normalization of name valorDeMedicion for the key N50020 in the final JSON structure.
+ * Normalization of name valorDeMedicion for the key in the final JSON structure.
  */
 export const valorDeMedicion = "valorDeMedicion";
 /**
- * Normalization of name alineacionFaroDerechoHorizontal for the key 50021  in the final JSON structure.
+ * Normalization of name alineacionFaroDerechoHorizontal for the key in the final JSON structure.
  */
 export const alineacionFaroDerechoHorizontal =  "alineacionFaroDerechoHorizontal";
 /**
- * Normalization of name alineacionFaroIzquierdoHorizontal for the key  in the final JSON structure.
+ * Normalization of name alineacionFaroIzquierdoHorizontal for the key in the final JSON structure.
  */
 export const alineacionFaroIzquierdoHorizontal =  "alineacionFaroIzquierdoHorizontal";
 /**
- * Normalization of name intensidadAltaDerecha for the printkey  in the final JSON structure.
+ * Normalization of name intensidadAltaDerecha for the key in the final JSON structure.
  */
 export const intensidadAltaDerecha = "intensidadAltaDerecha";
 /**
- * Normalization of name intensidadAltaIzquierda for the printkey  in the final JSON structure.
+ * Normalization of name intensidadAltaIzquierda for the key in the final JSON structure.
  */
 export const intensidadAltaIzquierda = "intensidadAltaIzquierda";
 /**
- * Normalization of name intensidadBajaDerecha for the printkey  in the final JSON structure.
+ * Normalization of name intensidadBajaDerecha for the key in the final JSON structure.
  */
 export const intensidadBajaDerecha = "intensidadBajaDerecha";
 /**
- * Normalization of name intensidadBajaIzquierda for the printkey  in the final JSON structure.
+ * Normalization of name intensidadBajaIzquierda for the key in the final JSON structure.
  */
 export const intensidadBajaIzquierda = "intensidadBajaIzquierda";
 /**
- * Normalization of name intensidadAuxiliarDerecha for the printkey  in the final JSON structure.
+ * Normalization of name intensidadAuxiliarDerecha for the key in the final JSON structure.
  */
 export const intensidadAuxiliarDerecha = "intensidadAuxiliarDerecha";
 /**
- * Normalization of name intensidadAuxiliarIzquierda for the printkey  in the final JSON structure.
+ * Normalization of name intensidadAuxiliarIzquierda for the key in the final JSON structure.
  */
 export const intensidadAuxiliarIzquierda = "intensidadAuxiliarIzquierda";
 /**
- * Normalization of name alineacionFaroDerechoVertical for the printkey  in the final JSON structure.
+ * Normalization of name alineacionFaroDerechoVertical for the key in the final JSON structure.
  */
 export const alineacionFaroDerechoVertical = "alineacionFaroDerechoVertical";
 /**
- * Normalization of name alineacionFaroIzquierdoVertical for the printkey  in the final JSON structure.
+ * Normalization of name alineacionFaroIzquierdoVertical for the key in the final JSON structure.
  */
 export const alineacionFaroIzquierdoVertical =  "alineacionFaroIzquierdoVertical";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFrenoEje1 for the key 51030  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFrenoEje1 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFrenoEje1 =  "motivoDeCorteDePruebaDeFrenoEje1";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFrenoEje2 for the key  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFrenoEje2 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFrenoEje2 =  "motivoDeCorteDePruebaDeFrenoEje2";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFrenoEje3 for the printkey  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFrenoEje3 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFrenoEje3 =  "motivoDeCorteDePruebaDeFrenoEje3";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFrenoEje4 for the key N51101 in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFrenoEje4 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFrenoEje4 =  "motivoDeCorteDePruebaDeFrenoEje4";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFrenoEje5 for the key 52000  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFrenoEje5 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFrenoEje5 =  "motivoDeCorteDePruebaDeFrenoEje5";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFrenoEje6 for the key  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFrenoEje6 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFrenoEje6 =  "motivoDeCorteDePruebaDeFrenoEje6";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFManoEje1 for the printkey  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFManoEje1 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFManoEje1 =  "motivoDeCorteDePruebaDeFManoEje1";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFManoEje2 for the key N52021 in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFManoEje2 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFManoEje2 =  "motivoDeCorteDePruebaDeFManoEje2";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFManoEje3 for the key 52030  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFManoEje3 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFManoEje3 =  "motivoDeCorteDePruebaDeFManoEje3";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFManoEje4 for the key  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFManoEje4 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFManoEje4 =  "motivoDeCorteDePruebaDeFManoEje4";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFManoEje5 for the printkey  in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFManoEje5 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFManoEje5 =  "motivoDeCorteDePruebaDeFManoEje5";
 /**
- * Normalization of name motivoDeCorteDePruebaDeFManoEje6 for the key N52101 in the final JSON structure.
+ * Normalization of name motivoDeCorteDePruebaDeFManoEje6 for the key in the final JSON structure.
  */
 export const motivoDeCorteDePruebaDeFManoEje6 =  "motivoDeCorteDePruebaDeFManoEje6";
 /**
- * Normalization of name valorDeCeroDeBFDerecho for the key  in the final JSON structure.
+ * Normalization of name valorDeCeroDeBFDerecho for the key in the final JSON structure.
  */
 export const valorDeCeroDeBFDerecho = "valorDeCeroDeBFDerecho";
 /**
- * Normalization of name valorDeCeroDeBFIzquierdo for the key  in the final JSON structure.
+ * Normalization of name valorDeCeroDeBFIzquierdo for the key in the final JSON structure.
  */
 export const valorDeCeroDeBFIzquierdo = "valorDeCeroDeBFIzquierdo";
 /**
- * Normalization of name valorDeCeroBalanzaDerecha for the key  in the final JSON structure.
+ * Normalization of name valorDeCeroBalanzaDerecha for the key in the final JSON structure.
  */
 export const valorDeCeroBalanzaDerecha = "valorDeCeroBalanzaDerecha";
 /**
- * Normalization of name valorDeCeroDeBalanzaIzquierda for the key  in the final JSON structure.
+ * Normalization of name valorDeCeroDeBalanzaIzquierda for the key in the final JSON structure.
  */
 export const valorDeCeroDeBalanzaIzquierda = "valorDeCeroDeBalanzaIzquierda";
 /**
- * Normalization of name valorDeGananciaBFIzquierdo for the key  in the final JSON structure.
+ * Normalization of name valorDeGananciaBFIzquierdo for the key in the final JSON structure.
  */
 export const valorDeGananciaBFIzquierdo = "valorDeGananciaBFIzquierdo";
 /**
- * Normalization of name valorDeGananciaDeBFDerecho for the key  in the final JSON structure.
+ * Normalization of name valorDeGananciaDeBFDerecho for the key in the final JSON structure.
  */
 export const valorDeGananciaDeBFDerecho = "valorDeGananciaDeBFDerecho";
 /**
- * Normalization of name valorDeGananciaDeBalanzaIzquierda for the key  in the final JSON structure.
+ * Normalization of name valorDeGananciaDeBalanzaIzquierda for the key in the final JSON structure.
  */
 export const valorDeGananciaDeBalanzaIzquierda =  "valorDeGananciaDeBalanzaIzquierda";
 /**
- * Normalization of name valorDeGananciaDeBalanzaDerecha for the printkey  in the final JSON structure.
+ * Normalization of name valorDeGananciaDeBalanzaDerecha for the key in the final JSON structure.
  */
 export const valorDeGananciaDeBalanzaDerecha =  "valorDeGananciaDeBalanzaDerecha";
 /**
- * Normalization of name numeroDeLinea for the key 53101 for the key  in the final JSON structure.
+ * Normalization of name numeroDeLinea for the key in the final JSON structure.
  */
 export const numeroDeLinea = "numeroDeLinea";
 /**
- * Normalization of name fechaDeIngresoAlPuesto1 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto1 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto1 = "fechaDeIngresoAlPuesto1";
 /**
- * Normalization of name fechaDeSalidaDelPuesto1 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto1 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto1 = "fechaDeSalidaDelPuesto1";
 /**
- * Normalization of name operadorPuesto1 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto1 for the key in the final JSON structure.
  */
 export const operadorPuesto1 = "operadorPuesto1";
 /**
- * Normalization of name fechaDeIngresoAlPuesto2 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto2 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto2 = "fechaDeIngresoAlPuesto2";
 /**
- * Normalization of name fechaDeSalidaDelPuesto2 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto2 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto2 = "fechaDeSalidaDelPuesto2";
 /**
- * Normalization of name operadorPuesto2 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto2 for the key in the final JSON structure.
  */
 export const operadorPuesto2 = "operadorPuesto2";
 /**
- * Normalization of name fechaDeIngresoAlPuesto3 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto3 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto3 = "fechaDeIngresoAlPuesto3";
 /**
- * Normalization of name fechaDeSalidaDelPuesto3 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto3 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto3 = "fechaDeSalidaDelPuesto3";
 /**
- * Normalization of name operadorPuesto3 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto3 for the key in the final JSON structure.
  */
 export const operadorPuesto3 = "operadorPuesto3";
 /**
- * Normalization of name fechaDeIngresoAlPuesto4 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto4 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto4 = "fechaDeIngresoAlPuesto4";
 /**
- * Normalization of name fechaDeSalidaDelPuesto4 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto4 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto4 = "fechaDeSalidaDelPuesto4";
 /**
- * Normalization of name operadorPuesto4 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto4 for the key in the final JSON structure.
  */
 export const operadorPuesto4 = "operadorPuesto4";
 /**
- * Normalization of name fechaDeIngresoAlPuesto5 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto5 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto5 = "fechaDeIngresoAlPuesto5";
 /**
- * Normalization of name fechaDeSalidaDelPuesto5 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto5 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto5 = "fechaDeSalidaDelPuesto5";
 /**
- * Normalization of name operadorPuesto5 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto5 for the key in the final JSON structure.
  */
 export const operadorPuesto5 = "operadorPuesto5";
 /**
- * Normalization of name fechaDeIngresoAlPuesto6 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto6 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto6 = "fechaDeIngresoAlPuesto6";
 /**
- * Normalization of name fechaDeSalidaDelPuesto6 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto6 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto6 = "fechaDeSalidaDelPuesto6";
 /**
- * Normalization of name operadorPuesto6 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto6 for the key in the final JSON structure.
  */
 export const operadorPuesto6 = "operadorPuesto6";
 /**
- * Normalization of name fechaDeIngresoAlPuesto7 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto7 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto7 = "fechaDeIngresoAlPuesto7";
 /**
- * Normalization of name fechaDeSalidaDelPuesto7 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto7 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto7 = "fechaDeSalidaDelPuesto7";
 /**
- * Normalization of name operadorPuesto7 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto7 for the key in the final JSON structure.
  */
 export const operadorPuesto7 = "operadorPuesto7";
 /**
- * Normalization of name fechaDeIngresoAlPuesto8 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto8 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto8 = "fechaDeIngresoAlPuesto8";
 /**
- * Normalization of name fechaDeSalidaDelPuesto8 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto8 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto8 = "fechaDeSalidaDelPuesto8";
 /**
- * Normalization of name operadorPuesto8 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto8 for the key in the final JSON structure.
  */
 export const operadorPuesto8 = "operadorPuesto8";
 /**
- * Normalization of name fechaDeIngresoAlPuesto9 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto9 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto9 = "fechaDeIngresoAlPuesto9";
 /**
- * Normalization of name fechaDeSalidaDelPuesto9 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto9 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto9 = "fechaDeSalidaDelPuesto9";
 /**
- * Normalization of name operadorPuesto9 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto9 for the key in the final JSON structure.
  */
 export const operadorPuesto9 = "operadorPuesto9";
 /**
- * Normalization of name fechaDeIngresoAlPuesto10 for the key  in the final JSON structure.
+ * Normalization of name fechaDeIngresoAlPuesto10 for the key in the final JSON structure.
  */
 export const fechaDeIngresoAlPuesto10 = "fechaDeIngresoAlPuesto10";
 /**
- * Normalization of name fechaDeSalidaDelPuesto10 for the key  in the final JSON structure.
+ * Normalization of name fechaDeSalidaDelPuesto10 for the key in the final JSON structure.
  */
 export const fechaDeSalidaDelPuesto10 = "fechaDeSalidaDelPuesto10";
 /**
- * Normalization of name operadorPuesto10 for the key  in the final JSON structure.
+ * Normalization of name operadorPuesto10 for the key in the final JSON structure.
  */
 export const operadorPuesto10 = "operadorPuesto10";
 /**
- * Normalization of name nroDeLineaPto1 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto1 for the key in the final JSON structure.
  */
 export const nroDeLineaPto1 = "nroDeLineaPto1";
 /**
- * Normalization of name nroDeLineaPto2 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto2 for the key in the final JSON structure.
  */
 export const nroDeLineaPto2 = "nroDeLineaPto2";
 /**
- * Normalization of name nroDeLineaPto3 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto3 for the key in the final JSON structure.
  */
 export const nroDeLineaPto3 = "nroDeLineaPto3";
 /**
- * Normalization of name nroDeLineaPto4 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto4 for the key in the final JSON structure.
  */
 export const nroDeLineaPto4 = "nroDeLineaPto4";
 /**
- * Normalization of name nroDeLineaPto5 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto5 for the key in the final JSON structure.
  */
 export const nroDeLineaPto5 = "nroDeLineaPto5";
 /**
- * Normalization of name nroDeLineaPto6 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto6 for the key in the final JSON structure.
  */
 export const nroDeLineaPto6 = "nroDeLineaPto6";
 /**
- * Normalization of name nroDeLineaPto7 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto7 for the key in the final JSON structure.
  */
 export const nroDeLineaPto7 = "nroDeLineaPto7";
 /**
- * Normalization of name nroDeLineaPto8 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto8 for the key in the final JSON structure.
  */
 export const nroDeLineaPto8 = "nroDeLineaPto8";
 /**
- * Normalization of name nroDeLineaPto9 for the key  in the final forJSON structure.
+ * Normalization of name nroDeLineaPto9 for the key in the final JSON structure.
  */
 export const nroDeLineaPto9 = "nroDeLineaPto9";
 /**
- * Normalization of name nroDeLineaPto10 for the key  in the final JSON structure.
+ * Normalization of name nroDeLineaPto10 for the key in the final JSON structure.
  */
 export const nroDeLineaPto10 = "nroDeLineaPto10";
 /**
