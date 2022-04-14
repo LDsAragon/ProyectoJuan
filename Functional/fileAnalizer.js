@@ -926,11 +926,10 @@ function transformMapToJson(Stringify) {
   }
 
   jsonString = JSON.stringify(obj); // just the minimized json
+  
   if(Stringify){
     jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs  
   }
-  
-  
 
   return jsonString;
 }
