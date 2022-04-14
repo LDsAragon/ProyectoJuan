@@ -65,34 +65,34 @@ export const varible = "Diferencia Rendimiento Lado A Lado"  ; */
 export const resultadoMediciónOpacidad = "resultadoMediciónOpacidad"  ;
 
 
-export const varible = "ResultadoMonoxidoDeCarbonoCO"  ;
-export const varible = "ResultadoPartesPorMillónHC"  ;
-export const varible = "ResultadoSensorDeOxigenoO2"  ;
-export const varible = "ResultadoPartesPorMillónNox"  ;
-export const varible = "ResultadoDioxidoDeCarbonoCO1"  ;
-export const varible = "Lambda"  ;
+export const ResultadoMonoxidoDeCarbonoCO = "ResultadoMonoxidoDeCarbonoCO"  ;
+export const ResultadoPartesPorMillónHC = "ResultadoPartesPorMillónHC"  ;
+export const ResultadoSensorDeOxigenoO2 = "ResultadoSensorDeOxigenoO2"  ;
+export const ResultadoPartesPorMillónNox = "ResultadoPartesPorMillónNox"  ;
+export const ResultadoDioxidoDeCarbonoCO1 = "ResultadoDioxidoDeCarbonoCO1"  ;
+export const Lambda = "Lambda"  ;
+
+/*
+export const fuerzaDeFrenadoLadoDerecho = "fuerzaDeFrenadoLadoDerecho"  ;
+export const fuerzaDeFrenadoLadoIzquierdo = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const DiferenciaFuerzaFrenadoLadoALado = "DiferenciaFuerzaFrenadoLadoALado"  ;
+export const ovalidadLadoDerecho = "ovalidadLadoDerecho"  ;
+export const ovalidadLadoIzquierdo = "ovalidadLadoIzquierdo"  ;
+export const resistenciaLadoDerecho = "resistenciaLadoDerecho"  ;
+export const resistenciaLadoIzquierdo = "resistenciaLadoIzquierdo"  ;
+export const rendimientoDelEje = "rendimientoDelEje"  ;
+export const PesoLadoDerecho = "PesoLadoDerecho"  ;
+export const PesoLadoIzquierdo = "PesoLadoIzquierdo"  ;
+
+
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "FuerzaDeFrenadoLadoIzquierdo"  ;
-export const varible = "DiferenciaFuerzaFrenadoLadoALado"  ;
-export const varible = "OvalidadLadoDerecho"  ;
-export const varible = "OvalidadLadoIzquierdo"  ;
-export const varible = "ResistenciaLadoDerecho"  ;
-export const varible = "ResistenciaLadoIzquierdo"  ;
-export const varible = "rendimientoDelEje"  ;
-export const varible = "PesoLadoDerecho"  ;
-export const varible = "PesoLadoIzquierdo"  ;
-
-
-
-
-export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "FuerzaDeFrenadoLadoizquierdo"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
 export const varible = "DiferenciaFzaFrenadoLado A Lado"  ;
-export const varible = "OvalidadLadoDerecho"  ;
-export const varible = "OvalidadLadoIzquierdo"  ;
-export const varible = "ResistenciaLadoDerecho"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
 export const varible = "ResistenciaALaRodaduraLadoIzquierdo"  ;
 export const varible = "rendimientoDelEje"  ;
 export const varible = "PesoLadoDerecho"  ;
@@ -102,12 +102,12 @@ export const varible = "PesoLadoIzquierdo"  ;
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "FuerzaDeFrenadoLadoIzquierdo"  ;
-export const varible = "DiferenciaFzaFrenadoLadoALado"  ;
-export const varible = "OvalidadLadoDerecho"  ;
-export const varible = "OvalidadLadoIzquierdo"  ;
-export const varible = "ResistenciaLadoDerecho"  ;
-export const varible = "ResistenciaLadoIzquierdo"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const varible = "diferenciaFzaFrenadoLadoALado"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
+export const varible = "resistenciaLadoIzquierdo"  ;
 export const varible = "rendimientoDelEje"  ;
 export const varible = "PesoLadoDerecho"  ;
 export const varible = "PesoLadoIzquierdo"  ;
@@ -116,12 +116,12 @@ export const varible = "PesoLadoIzquierdo"  ;
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "FuerzaDeFrenadoLadoIzquierdo"  ;
-export const varible = "DiferenciaFzaFrenadoLadoALado"  ;
-export const varible = "OvalidadLadoDerecho"  ;
-export const varible = "OvalidadLadoIzquierdo"  ;
-export const varible = "ResistenciaLadoDerecho"  ;
-export const varible = "ResistenciaLadoIzquierdo"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const varible = "diferenciaFzaFrenadoLadoALado"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
+export const varible = "resistenciaLadoIzquierdo"  ;
 export const varible = "rendimientoDelEje"  ;
 export const varible = "PesoLadoDerecho"  ;
 export const varible = "PesoLadoIzquierdo"  ;
@@ -130,12 +130,12 @@ export const varible = "PesoLadoIzquierdo"  ;
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "FuerzaDeFrenadoLadoIzquierdo"  ;
-export const varible = "DiferenciaFzaFrenadoLadoALado"  ;
-export const varible = "OvalidadLadoDerecho"  ;
-export const varible = "OvalidadLadoIzquierdo"  ;
-export const varible = "ResistenciaLadoDerecho"  ;
-export const varible = "ResistenciaLadoIzquierdo"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const varible = "diferenciaFzaFrenadoLadoALado"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
+export const varible = "resistenciaLadoIzquierdo"  ;
 export const varible = "rendimientoDelEje"  ;
 export const varible = "PesoLadoDerecho"  ;
 export const varible = "PesoLadoIzquierdo"  ;
@@ -144,12 +144,12 @@ export const varible = "PesoLadoIzquierdo"  ;
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "FuerzaDeFrenadoLadoIzquierdo"  ;
-export const varible = "DiferenciaFzaFrenadoLadoALado"  ;
-export const varible = "OvalidadLadoDerecho"  ;
-export const varible = "OvalidadLadoIzquierdo"  ;
-export const varible = "ResistenciaLadoDerecho"  ;
-export const varible = "ResistenciaLadoIzquierdo"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const varible = "diferenciaFzaFrenadoLadoALado"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
+export const varible = "resistenciaLadoIzquierdo"  ;
 export const varible = "rendimientoDelEje"  ;
 export const varible = "PesoLadoDerecho"  ;
 export const varible = "PesoLadoIzquierdo"  ;
@@ -158,156 +158,151 @@ export const varible = "PesoLadoIzquierdo"  ;
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "FuerzaDeFrenadoLadoIzquierdo"  ;
-export const varible = "DiferenciaFzaFrenadoLadoALado"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const varible = "diferenciaFzaFrenadoLadoALado"  ;
 export const varible = "rendimientoDelEje"  ;
-export const varible = "Ovalidad Lado Derecho"  ;
-export const varible = "Ovalidad Lado Izquierdo"  ;
-export const varible = "Resistencia Lado Derecho"  ;
-export const varible = "Resistencia Lado Izquierdo"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
+export const varible = "resistenciaLadoIzquierdo"  ;
 
 
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "Fuerza De Frenado Lado Izquierdo"  ;
-export const varible = "Diferencia Fza. Frenado Lado A Lado"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const varible = "diferenciaFzaFrenadoLadoALado"  ;
 export const varible = "rendimientoDelEje"  ;
-export const varible = "Ovalidad Lado Derecho"  ;
-export const varible = "Ovalidad Lado Izquierdo"  ;
-export const varible = "Resistencia Lado Derecho"  ;
-export const varible = "Resistencia Lado Izquierdo"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
+export const varible = "resistenciaLadoIzquierdo"  ;
 
 
 
 
 export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "Fuerza De Frenado Lado Izquierdo"  ;
-export const varible = "Diferencia Fza. Frenado Lado A Lado"  ;
+export const varible = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const varible = "diferenciaFzaFrenadoLadoALado"  ;
 export const varible = "rendimientoDelEje"  ;
-export const varible = "Ovalidad Lado Derecho"  ;
-export const varible = "Ovalidad Lado Izquierdo"  ;
-export const varible = "Resistencia Lado Derecho"  ;
-export const varible = "Resistencia Lado Izquierdo"  ;
+export const varible = "ovalidadLadoDerecho"  ;
+export const varible = "ovalidadLadoIzquierdo"  ;
+export const varible = "resistenciaLadoDerecho"  ;
+export const varible = "resistenciaLadoIzquierdo"  ;
+*/
 
 
 
 
-export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "Fuerza De Frenado Lado Izquierdo"  ;
-export const varible = "Diferencia Fuerza Frenado Lado A Lado"  ;
-export const varible = "rendimientoDelEje"  ;
-export const varible = "Ovalidad Lado Derecho"  ;
-export const varible = "Ovalidad Lado Izquierdo"  ;
-export const varible = "Resistencia A La Rodadura Lado Derecho"  ;
-export const varible = "Resistencia A La Rodadura Lado Izquierdo"  ;
+export const fuerzaDeFrenadoLadoDerecho = "fuerzaDeFrenadoLadoDerecho"  ;
+export const fuerzaDeFrenadoLadoIzquierdo = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const diferenciaFzaFrenadoLadoALado = "diferenciaFzaFrenadoLadoALado"  ;
+export const rendimientoDelEje = "rendimientoDelEje"  ;
+export const ovalidadLadoDerecho = "ovalidadLadoDerecho"  ;
+export const ovalidadLadoIzquierdo = "ovalidadLadoIzquierdo"  ;
+export const resistenciaALaRodaduraLadoDerecho = "resistenciaALaRodaduraLadoDerecho"  ;
+export const resistenciaALaRodaduraLadoIzquierdo = "resistenciaALaRodaduraLadoIzquierdo"  ;
+
+
+/*
+
+export const fuerzaDeFrenadoLadoDerecho = "fuerzaDeFrenadoLadoDerecho"  ;
+export const fuerzaDeFrenadoLadoIzquierdo = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const diferenciaFzaFrenadoLadoALado = "diferenciaFzaFrenadoLadoALado"  ;
+export const rendimientoDelEje = "rendimientoDelEje"  ;
+export const ovalidadLadoDerecho = "ovalidadLadoDerecho"  ;
+export const ovalidadLadoIzquierdo = "ovalidadLadoIzquierdo"  ;
+export const resistenciaALaRodaduraLadoDerecho = "resistenciaALaRodaduraLadoDerecho"  ;
+export const resistenciaALaRodaduraLadoIzquierdo = "resistenciaALaRodaduraLadoIzquierdo"  ;
 
 
 
 
-export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "Fuerza De Frenado Lado Izquierdo"  ;
-export const varible = "Diferencia Fza. Frenado Lado A Lado"  ;
-export const varible = "rendimientoDelEje"  ;
-export const varible = "Ovalidad Lado Derecho"  ;
-export const varible = "Ovalidad Lado Izquierdo"  ;
-export const varible = "Resistencia A La Rodadura Lado Derecho"  ;
-export const varible = "Resistencia A La Rodadura Lado Izquierdo"  ;
+export const fuerzaDeFrenadoLadoDerecho = "fuerzaDeFrenadoLadoDerecho"  ;
+export const fuerzaDeFrenadoLadoIzquierdo = "fuerzaDeFrenadoLadoIzquierdo"  ;
+export const diferenciaFzaFrenadoLadoALado = "diferenciaFzaFrenadoLadoALado"  ;
+export const rendimientoDelEje = "rendimientoDelEje"  ;
+export const ovalidadLadoDerecho = "ovalidadLadoDerecho"  ;
+export const ovalidadLadoIzquierdo = "ovalidadLadoIzquierdo"  ;
+export const resistenciaALaRodaduraLadoDerecho = "resistenciaALaRodaduraLadoDerecho"  ;
+export const resistenciaALaRodaduraLadoIzquierdo = "resistenciaALaRodaduraLadoIzquierdo"  ;
+
+
+*/
+
+export const alineaciónFaroDerechoHorizontal = "alineaciónFaroDerechoHorizontal"  ;
+export const alineaciónFaroIzquierdoHorizontal = "alineaciónFaroIzquierdoHorizontal"  ;
+export const intensidadAltaDerecha = "intensidadAltaDerecha"  ;
+export const intensidadAltaIzquierda = "intensidadAltaIzquierda"  ;
+export const intensidadBajaDerecha = "intensidadBajaDerecha"  ;
+export const intensidadBajaIzquierda = "intensidadBajaIzquierda"  ;
+export const intensidadAuxiliarDerecho = "intensidadAuxiliarDerecho"  ;
+export const intensidadAuxiliarIzquierdo = "intensidadAuxiliarIzquierdo"  ;
+export const alineaciónFaroDerechoVertical = "alineaciónFaroDerechoVertical"  ;
+export const alineaciónFaroIzquierdoVertical = "alineaciónFaroIzquierdoVertical"  ;
 
 
 
 
-export const varible = "fuerzaDeFrenadoLadoDerecho"  ;
-export const varible = "Fuerza De Frenado Lado Izquierdo"  ;
-export const varible = "Diferencia Fuerza Frenado Lado A Lado"  ;
-export const varible = "rendimientoDelEje"  ;
-export const varible = "Ovalidad Lado Derecho"  ;
-export const varible = "Ovalidad Lado Izquierdo"  ;
-export const varible = "Resistencia A La Rodadura Lado Derecho"  ;
-export const varible = "Resistencia A La Rodadura Lado Izquierdo"  ;
+export const motivoDeCorteDePruebaDeFrenoEje1 = "motivoDeCorteDePruebaDeFrenoEje1"  ;
+export const motivoDeCorteDePruebaDeFrenoEje2 = "motivoDeCorteDePruebaDeFrenoEje2"  ;
+export const motivoDeCorteDePruebaDeFrenoEje3 = "motivoDeCorteDePruebaDeFrenoEje3"  ;
+export const motivoDeCorteDePruebaDeFrenoEje4 = "motivoDeCorteDePruebaDeFrenoEje4"  ;
+export const motivoDeCorteDePruebaDeFrenoEje5 = "motivoDeCorteDePruebaDeFrenoEje5"  ;
+export const motivoDeCorteDePruebaDeFrenoEje6 = "motivoDeCorteDePruebaDeFrenoEje6"  ;
+export const motivoDeCorteDePruebaDeFManoEje1 = "motivoDeCorteDePruebaDeFManoEje1"  ;
+export const motivoDeCorteDePruebaDeFManoEje2 = "motivoDeCorteDePruebaDeFManoEje2"  ;
+export const motivoDeCorteDePruebaDeFManoEje3 = "motivoDeCorteDePruebaDeFManoEje3"  ;
+export const motivoDeCorteDePruebaDeFManoEje4 = "motivoDeCorteDePruebaDeFManoEje4"  ;
+export const motivoDeCorteDePruebaDeFManoEje5 = "motivoDeCorteDePruebaDeFManoEje5"  ;
+export const motivoDeCorteDePruebaDeFManoEje6 = "motivoDeCorteDePruebaDeFManoEje6"  ;
 
+export const valorDeCeroDeBFDerecho = "valorDeCeroDeBFDerecho"  ;
+export const valorDeCeroDeBFIzquierdo = "valorDeCeroDeBFIzquierdo"  ;
+export const valorDeCeroBalanzaDerecha = "valorDeCeroBalanzaDerecha"  ;
+export const valorDeCeroDeBalanzaIzquierda = "valorDeCeroDeBalanzaIzquierda"  ;
+export const valorDeGananciaBFIzquierdo = "valorDeGananciaBFIzquierdo"  ;
+export const valorDeGananciaDeBFDerecho = "valorDeGananciaDeBFDerecho"  ;
+export const valorDeGananciaDeBalanzaIzquierda = "valorDeGananciaDeBalanzaIzquierda"  ;
+export const valorDeGananciaDeBalanzaDerecha = "valorDeGananciaDeBalanzaDerecha"  ;
 
-
-
-export const varible = "Alineación Faro Derecho Horizontal"  ;
-export const varible = "Alineación Faro Izquierdo Horizontal"  ;
-export const varible = "Intensidad Alta Derecha"  ;
-export const varible = "Intensidad Alta Izquierda"  ;
-export const varible = "Intensidad Baja Derecha"  ;
-export const varible = "Intensidad Baja Izquierda"  ;
-export const varible = "Intensidad Auxiliar Derecho"  ;
-export const varible = "Intensidad Auxiliar Izquierdo"  ;
-export const varible = "Alineación Faro Derecho Vertical"  ;
-export const varible = "Alineación Faro Izquierdo Vertical"  ;
-
-
-
-
-export const varible = "Motivo De Corte De Prueba De Freno Eje 1"  ;
-export const varible = "Motivo De Corte De Prueba De Freno Eje 2"  ;
-export const varible = "Motivo De Corte De Prueba De Freno Eje 3"  ;
-export const varible = "Motivo De Corte De Prueba De Freno Eje 4"  ;
-export const varible = "Motivo De Corte De Prueba De Freno Eje 5"  ;
-export const varible = "Motivo De Corte De Prueba De Freno Eje 6"  ;
-export const varible = "Motivo De Corte De Prueba De F. Mano Eje 1"  ;
-export const varible = "Motivo De Corte De Prueba De F. Mano Eje 2"  ;
-export const varible = "Motivo De Corte De Prueba De F. Mano Eje 3"  ;
-export const varible = "Motivo De Corte De Prueba De F. Mano Eje 4"  ;
-export const varible = "Motivo De Corte De Prueba De F. Mano Eje 5"  ;
-export const varible = "Motivo De Corte De Prueba De F. Mano Eje 6"  ;
-
-
-
-
-export const varible = "Valor De Cero De BF Derecho"  ;
-export const varible = "Valor De Cero De BF Izquierdo"  ;
-export const varible = "Valor De Cero Balanza Derecha"  ;
-export const varible = "Valor De Cero De Balanza Izquierda"  ;
-export const varible = "Valor De Ganancia BF Izquierdo"  ;
-export const varible = "Valor De Ganancia De BF Derecho"  ;
-export const varible = "Valor De Ganancia De Balanza Izquierda"  ;
-export const varible = "Valor De Ganancia De Balanza Derecha"  ;
-
-
-
-
-export const varible = "Fecha Ingreso Al Puesto 1"  ;
-export const varible = "Fecha De Salida Del Puesto 1"  ;
-export const varible = "Operador Puesto 1"  ;
-export const varible = "Fecha Ingreso Al Puesto 2"  ;
-export const varible = "Fecha De Salida Del Puesto 2"  ;
-export const varible = "Operador Puesto 2"  ;
-export const varible = "Fecha Ingreso Al Puesto 3"  ;
-export const varible = "Fecha De Salida Del Puesto 3"  ;
-export const varible = "Operador Puesto 3"  ;
-export const varible = "Fecha Ingreso Al Puesto 4"  ;
-export const varible = "Fecha De Salida Del Puesto 4"  ;
-export const varible = "Operador Puesto 4"  ;
-export const varible = "Fecha Ingreso Al Puesto 5"  ;
-export const varible = "Fecha De Salida Del Puesto 5"  ;
-export const varible = "Operador Puesto 5"  ;
-export const varible = "Fecha Ingreso Al Puesto 6"  ;
-export const varible = "Fecha De Salida Del Puesto 6"  ;
-export const varible = "Operador Puesto 6"  ;
-export const varible = "Fecha Ingreso Al Puesto 7"  ;
-export const varible = "Fecha De Salida Del Puesto 7"  ;
-export const varible = "Operador Puesto 7"  ;
-export const varible = "Fecha Ingreso Al Puesto 8"  ;
-export const varible = "Fecha De Salida Del Puesto 8"  ;
-export const varible = "Operador Puesto 8"  ;
-export const varible = "Fecha Ingreso Al Puesto 9"  ;
-export const varible = "Fecha De Salida Del Puesto 9"  ;
-export const varible = "Operador Puesto 9"  ;
-export const varible = "Fecha Ingreso Al Puesto 10"  ;
-export const varible = "Fecha De Salida Del Puesto 10"  ;
-export const varible = "Operador Puesto 10"  ;
-export const varible = "Nro De Línea Pto1"  ;
-export const varible = "Nro De Línea Pto2"  ;
-export const varible = "Nro De Línea Pto3"  ;
-export const varible = "Nro De Línea Pto4"  ;
-export const varible = "Nro De Línea Pto5"  ;
-export const varible = "Nro De Línea Pto6"  ;
-export const varible = "Nro De Línea Pto7"  ;
-export const varible = "Nro De Línea Pto8"  ;
-export const varible = "Nro De Línea Pto9"  ;
-export const varible = "Nro De Línea Pto10"  ;
+export const fechaIngresoAlPuesto1 = "fechaIngresoAlPuesto1"  ;
+export const fechaDeSalidaDelPuesto1 = "fechaDeSalidaDelPuesto1"  ;
+export const operadorPuesto1 = "operadorPuesto1"  ;
+export const fechaIngresoAlPuesto2 = "fechaIngresoAlPuesto2"  ;
+export const fechaDeSalidaDelPuesto2 = "fechaDeSalidaDelPuesto2"  ;
+export const operadorPuesto2 = "operadorPuesto2"  ;
+export const fechaIngresoAlPuesto3 = "fechaIngresoAlPuesto3"  ;
+export const fechaDeSalidaDelPuesto3 = "fechaDeSalidaDelPuesto3"  ;
+export const operadorPuesto3 = "operadorPuesto3"  ;
+export const fechaIngresoAlPuesto4 = "fechaIngresoAlPuesto4"  ;
+export const fechaDeSalidaDelPuesto4 = "fechaDeSalidaDelPuesto4"  ;
+export const operadorPuesto4 = "operadorPuesto4"  ;
+export const fechaIngresoAlPuesto5 = "fechaIngresoAlPuesto5"  ;
+export const fechaDeSalidaDelPuesto5 = "fechaDeSalidaDelPuesto5"  ;
+export const operadorPuesto5 = "operadorPuesto5"  ;
+export const fechaIngresoAlPuesto6 = "fechaIngresoAlPuesto6"  ;
+export const fechaDeSalidaDelPuesto6 = "fechaDeSalidaDelPuesto6"  ;
+export const operadorPuesto6 = "operadorPuesto6"  ;
+export const fechaIngresoAlPuesto7 = "fechaIngresoAlPuesto7"  ;
+export const fechaDeSalidaDelPuesto7 = "fechaDeSalidaDelPuesto7"  ;
+export const operadorPuesto7 = "operadorPuesto7"  ;
+export const fechaIngresoAlPuesto8 = "fechaIngresoAlPuesto8"  ;
+export const fechaDeSalidaDelPuesto8 = "fechaDeSalidaDelPuesto8"  ;
+export const operadorPuesto8 = "operadorPuesto8"  ;
+export const fechaIngresoAlPuesto9 = "fechaIngresoAlPuesto9"  ;
+export const fechaDeSalidaDelPuesto9 = "fechaDeSalidaDelPuesto9"  ;
+export const operadorPuesto9 = "operadorPuesto9"  ;
+export const fechaIngresoAlPuesto10 = "fechaIngresoAlPuesto10"  ;
+export const fechaDeSalidaDelPuesto10 = "fechaDeSalidaDelPuesto10"  ;
+export const operadorPuesto10 = "operadorPuesto10"  ;
+export const nroDeLíneaPto1 = "nroDeLíneaPto1"  ;
+export const nroDeLíneaPto2 = "nroDeLíneaPto2"  ;
+export const nroDeLíneaPto3 = "nroDeLíneaPto3"  ;
+export const nroDeLíneaPto4 = "nroDeLíneaPto4"  ;
+export const nroDeLíneaPto5 = "nroDeLíneaPto5"  ;
+export const nroDeLíneaPto6 = "nroDeLíneaPto6"  ;
+export const nroDeLíneaPto7 = "nroDeLíneaPto7"  ;
+export const nroDeLíneaPto8 = "nroDeLíneaPto8"  ;
+export const nroDeLíneaPto9 = "nroDeLíneaPto9"  ;
+export const nroDeLíneaPto10 = "nroDeLíneaPto10"  ;
