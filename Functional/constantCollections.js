@@ -447,6 +447,8 @@ export const categories = [
   "[ENDOFFILE]",
   "999999=END OF FILE",
   "[DATAOUT]",
+  "Inspección Visual",
+  "Inspección Visual Detector de Holguras",
 ];
 
  /**

@@ -132,6 +132,8 @@ let singleFileData = [];
  */
 let mapSingleFile = new Map();
 
+let valorJson = new Map();
+
 // Handle multiple fileuploads
 document.getElementById("file-input").addEventListener(
   "change",
@@ -158,7 +160,12 @@ document.getElementById("file-input").addEventListener(
     });
 
     setTimeout(function () {
-      document.getElementById("singleFileButton").click();
+      // document.getElementById("singleFileButton").click();
+      valorJson = proccesFileGetJson(true) ;
+      document.querySelector("#jsonContainer").innerHTML = valorJson;
+      document.querySelector("#jsonContainer").style.display = "block";
+      console.log(valorJson) ;
+
     }, 20);
   },
   false
@@ -183,13 +190,13 @@ document.getElementById("singleFileButton").addEventListener(
 );
 
 /**
- * Calls the funcitions that will process any files stored in singleFileData
+ * Calls the functions that will process any files stored in singleFileData
  * @returns retrieves the json object
  */
-export function proccesFileGetJson() {
+export function proccesFileGetJson(stringify) {
   let fileData = returnSetOfDataSF();
   let transformedMap = populateStructure();
-  let text = transformMapToJson();
+  let text = transformMapToJson(stringify);
 
   return text;
 }
@@ -225,6 +232,8 @@ function readFileAsText(file) {
 function returnSetOfDataSF() {
   // Abort if there were no files selected
   if (!singleFileData.length) return;
+
+  console.log(singleFileData) ; //aca se ve la mugre a limpiar
 
   let sanitizedFileData = cleanCategories(singleFileData[0]);
 
