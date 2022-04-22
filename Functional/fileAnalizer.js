@@ -108,7 +108,6 @@ let mapSingleFile = new Map();
  */
 let valorObject;
 
-document.getElementById("file-input").addEventListener(
 document
   .getElementById("file-input")
   .addEventListener("change", function (ev) {
