@@ -1,5 +1,4 @@
 import {
-  structureFinalMap,
   categories,
   headerMap,
   alineacionMap,
@@ -88,79 +87,68 @@ import {
   intEstadisticaDePuesto,
 } from "./constantVariables.js";
 import { structureMap } from "./globalVariables.js";
-// This didnt work as planned i have to wrap global variables into a function. More info appended to globalVariables.js
-// import {singleFileData,mapSingleFile} from "./globalVariables.js";
 
 /**
- *   Global Variable
+ *   Global Variable scopped to this file only
  *   Is used to store the value of the read file.
  *   While it's cleaned trimed parsed and deconstructed
  */
 let singleFileData = [];
 
 /**
- *  Global Variable
+ *  Global Variable scopped to this file only
  *  Will hold data from the txt file
  *  already parsed, cleaned and deconstructed.
  */
 let mapSingleFile = new Map();
 
-let valorJson = new Map();
-
-// Handle multiple fileuploads
-document.getElementById("file-input").addEventListener(
-  "change",
-  function (ev) {
-    let files = ev.currentTarget.files;
-    let readers = [];
-
-    // Abort if there were no files selected
-    if (!files.length) return;
-
-    // Store promises in array
-    for (let i = 0; i < files.length; i++) {
-      readers.push(readFileAsText(files[i]));
-    }
-
-    singleFileData = [];
-
-    // Trigger Promises
-    Promise.all(readers).then((values) => {
-      // Values will be an array that contains an item
-      // with the text of every selected file
-      // ["File1 Content", "File2 Content" ... "FileN Content"]
-      singleFileData.push(values.toString());
-    });
-
-    setTimeout(function () {
-      // document.getElementById("singleFileButton").click();
-      valorJson = proccesFileGetJson(true) ;
-      document.querySelector("#jsonContainer").innerHTML = valorJson;
-      document.querySelector("#jsonContainer").style.display = "block";
-      //console.log(valorJson) ;
-
-    }, 20);
-  },
-  false
-);
-
 /**
- * Button to parse data from file into json and print in text
+ *  Global Variable scopped to this file only
+ *  Will hold data from the txt file as Json object
  */
-document.getElementById("singleFileButton").addEventListener(
-  "click",
-  function (ev) {
-    returnSetOfDataSF();
-    let transformedMap = populateStructure();
-    let text = transformMapToJson(true);
-  
-    if (transformedMap !== structureFinalMap) {
-      document.querySelector("#jsonContainer").innerHTML = text;
-      document.querySelector("#jsonContainer").style.display = "block";
-    }  
-  },
-  false
-);
+let valorObject;
+
+document.getElementById("file-input").addEventListener(
+document
+  .getElementById("file-input")
+  .addEventListener("change", function (ev) {
+
+    procesTxt(ev) ;
+
+  }, false);
+
+function procesTxt(ev) {
+  let files = ev.currentTarget.files;
+  let readers = [];
+
+  // Abort if there were no files selected
+  if (!files.length) return;
+
+  // Store promises in array
+  for (let i = 0; i < files.length; i++) {
+    readers.push(readFileAsText(files[i]));
+  }
+
+  singleFileData = [];
+
+  // Trigger Promises
+  Promise.all(readers).then((values) => {
+    // Values will be an array that contains an item
+    // with the text of every selected file
+    // ["File1 Content", "File2 Content" ... "FileN Content"]
+    singleFileData.push(values.toString());
+  });
+
+  setTimeout(function () {
+    let valorjson = proccesFileGetJson(true);
+    valorObject = proccesFileGetObject();
+    document.querySelector("#jsonContainer").innerHTML = valorjson;
+    document.querySelector("#jsonContainer").style.display = "block";
+
+    window.valorObject = valorObject;
+    return valorObject;
+  }, 20);
+}
 
 /**
  * Calls the functions that will process any files stored in singleFileData
@@ -169,9 +157,17 @@ document.getElementById("singleFileButton").addEventListener(
 export function proccesFileGetJson(stringify) {
   returnSetOfDataSF();
   populateStructure();
-  let text = transformMapToJson(stringify);
+  return transformMapToJson(stringify);
+}
 
-  return text;
+/**
+ * Calls the functions that will process any files stored in singleFileData
+ * @returns retrieves the object
+ */
+export function proccesFileGetObject() {
+  returnSetOfDataSF();
+  populateStructure();
+  return transformMapToObject();
 }
 
 /**
@@ -895,7 +891,7 @@ function mapEstadísticaDePuestos(key, value, mappedObj) {
  * @returns Jsonified global variable structureMap.
  */
 function transformMapToJson(Stringify) {
-  let jsonString ;
+  let jsonString;
 
   /** Transform main Map into object */
   let obj = Object.fromEntries(structureMap);
@@ -910,10 +906,34 @@ function transformMapToJson(Stringify) {
   }
 
   jsonString = JSON.stringify(obj); // just the minimized json
-  
-  if(Stringify === true){
-    jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs  
+
+  if (Stringify === true) {
+    jsonString = JSON.stringify(obj, null, TABS); // Stringify with tabs
   }
 
   return jsonString;
 }
+
+/**
+ * Transforms the structureMap into a object
+ * And returns it as a JSON
+ *
+ * @returns Jsonified global variable structureMap.
+ */
+function transformMapToObject() {
+  /** Transform main Map into object */
+  let obj = Object.fromEntries(structureMap);
+
+  /** Transform submap into object and set it to obj */
+  for (let i = 0; i < collectionOfVariables.length; i++) {
+    let internalObj = Object.fromEntries(
+      structureMap.get(collectionOfVariables[i])
+    );
+    let varToSearch = collectionOfVariables[i];
+    obj[varToSearch] = internalObj;
+  }
+
+  return obj;
+}
+
+export { procesTxt };
